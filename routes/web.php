@@ -6,6 +6,7 @@ use App\Http\Controllers\back\AddController;
 use App\Http\Controllers\back\DeleteController;
 use App\Http\Controllers\back\UpgradeController;
 use App\Http\Controllers\back\ShowController;
+use App\Http\Controllers\back\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,29 +28,37 @@ Route::controller(PageController::class)->group(function () {
 
     });
 });
-//Back Routes
-Route::controller(AddController::class)->group(function () {
-    Route::prefix('/page')->group(function () {
+Route::prefix('/admin')->name('admin.')->group(function () {
+    //Back Routes
+    Route::get('/dashboard',ShowController::class)->name('dashboard');
+    Route::controller(AddController::class)->group(function () {
+        Route::prefix('/add')->group(function () {
 
+        });
     });
-});
+//Panel Login Routes
+    Route::controller(UserController::class)->group(function () {
+        Route::prefix('/login')->group(function () {
+
+        });
+    });
 //Delete Routes
+    Route::controller(DeleteController::class)->group(function () {
+        Route::prefix('/delete')->group(function () {
 
-Route::controller(DeleteController::class)->group(function () {
-    Route::prefix('/page')->group(function () {
-
+        });
     });
-});
 //Upgrade Routes
 
-Route::controller(UpgradeController::class)->group(function () {
-    Route::prefix('/page')->group(function () {
+    Route::controller(UpgradeController::class)->group(function () {
+        Route::prefix('/update')->group(function () {
 
+        });
     });
-});
 //Show Routes
-Route::controller(ShowController::class)->group(function () {
-    Route::prefix('/page')->group(function () {
+    Route::controller(ShowController::class)->group(function () {
+        Route::prefix('/show')->group(function () {
 
+        });
     });
 });
