@@ -94,7 +94,7 @@
             </div>
             <div class="card-body p-5" style="display: flex;flex-wrap: wrap;row-gap: 25px; ">
                 <div class="cardA">
-                    <div class="card-nameA">Tatlı Sayısı</div>
+                    <div class="card-nameA">Kategori Sayısı</div>
                     <div class="contentA">
                         <div class="iconA">
                             <i class="fad fa-pie fa-2x"></i>
@@ -108,7 +108,7 @@
                     </div>
                 </div>
                 <div class="cardA">
-                    <div class="card-nameA">İçecek Sayısı </div>
+                    <div class="card-nameA">Proje Sayısı </div>
                     <div class="contentA">
                         <div class="iconA">
                             <i class="fas fa-mug fa-2x"></i>
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <div class="cardA">
-                    <div class="card-nameA">Kahvaltılık Sayısı</div>
+                    <div class="card-nameA">Galerideki Görsel Sayısı</div>
                     <div class="contentA">
                         <div class="iconA">
                             <i class="fas fa-egg-fried fa-2x"></i>
@@ -136,7 +136,7 @@
                     </div>
                 </div>
                 <div class="cardA">
-                    <div class="card-nameA">Ana Yemek Sayısı </div>
+                    <div class="card-nameA">Gelen Mesaj Sayısı </div>
                     <div class="contentA">
                         <div class="iconA">
                             <i class="fas fa-cheeseburger fa-2x"></i>
@@ -150,7 +150,7 @@
                     </div>
                 </div>
                 <div class="cardA">
-                    <div class="card-nameA">Stokta Olmayan Ürün Sayısı </div>
+                    <div class="card-nameA">Pasif Proje Sayısı </div>
                     <div class="contentA">
                         <div class="iconA">
                             <i class="fas fa-empty-set fa-2x"></i>

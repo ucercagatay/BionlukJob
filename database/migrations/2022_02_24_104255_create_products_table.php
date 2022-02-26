@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('slug');
+            $table->boolean('status')->withComment('0 ise aktif 1 ise pasif');
             $table->timestamps();
             $table->foreign('category_id')->on('categories')->references('id');
         });

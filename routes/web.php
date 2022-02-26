@@ -28,18 +28,22 @@ Route::controller(PageController::class)->group(function () {
 
     });
 });
-Route::prefix('/admin')->name('admin.')->group(function () {
+Route::controller(UserController::class)->group(function () {
+    Route::get('/admin/login','showLogin')->middleware('isOut')->name('admin.login');
+    Route::post('admin/loginpost','login')->name('loginpost');
+});
+Route::prefix('/admin')->name('admin.')->middleware(['isLogin'])->group(function () {
     //Back Routes
-    Route::get('/dashboard',ShowController::class)->name('dashboard');
+    Route::get('/dashboard',[ShowController::class,'showDashboard'])->name('panel');
     Route::controller(AddController::class)->group(function () {
-        Route::prefix('/add')->group(function () {
-
-        });
-    });
-//Panel Login Routes
-    Route::controller(UserController::class)->group(function () {
-        Route::prefix('/login')->group(function () {
-
+        Route::prefix('/add')->name('add.')->group(function () {
+        Route::get('/category','addCategory')->name('category');
+        Route::post('/postCategory','postCategory')->name('postCategory');
+        Route::get('/projects','addProduct')->name('product');
+        Route::post('/postProject','postProduct')->name('postProject');
+        Route::get('/ımages','addImages')->name('images');
+        Route::post('/ımagePost','postImages')->name('postImage');
+        Route::get('/ımagePost','postImages')->name('postImage');
         });
     });
 //Delete Routes
@@ -50,14 +54,21 @@ Route::prefix('/admin')->name('admin.')->group(function () {
     });
 //Upgrade Routes
 
-    Route::controller(UpgradeController::class)->group(function () {
+    Route::controller(UpgradeController::class)->name('update.')->group(function () {
         Route::prefix('/update')->group(function () {
+            Route::get('/category/{id}','getCategory')->name('category');
+            Route::post('/postCategory/{id}','postCategory')->name('postCategory');
+            Route::get('/project/{id}','getProject')->name('product');
+            Route::post('/postProduct/{id}','postProduct')->name('postProduct');
 
         });
     });
 //Show Routes
     Route::controller(ShowController::class)->group(function () {
-        Route::prefix('/show')->group(function () {
+        Route::prefix('/show')->name('show.')->group(function () {
+        Route::get('/categories','showCategories')->name('category');
+        Route::get('/products','showProducts')->name('product');
+
 
         });
     });

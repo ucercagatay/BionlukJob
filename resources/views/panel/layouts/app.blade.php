@@ -280,7 +280,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
                     <h1 class="welcome-text">Hoşgeldiniz, <span
-                                class="text-black fw-bold"> asdad asd as d</span>
+                                class="text-black fw-bold">{{\Illuminate\Support\Facades\Auth::user()->name}} {{\Illuminate\Support\Facades\Auth::user()->surname}}</span>
                     </h1>
                 </li>
             </ul>
@@ -319,12 +319,15 @@
                     <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-menu-one" aria-expanded="false"
                        aria-controls="sidebar-menu-one">
                         <i class="fad fa-pie menu-icon"></i>
-                        <span class="menu-title">Tatlılar</span>
+                        <span class="menu-title">Kategori Ayarları</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="collapse" id="sidebar-menu-one">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"><a class="nav-link" href="">Tatlı Listesi</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('admin.show.category')}}">Kategorileri Görüntüle</a></li>
+                        </ul>
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="{{route('admin.add.category')}}">Kategori Ekle</a></li>
                         </ul>
                     </div>
                 </li>
@@ -332,12 +335,15 @@
                     <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-menu-two" aria-expanded="false"
                        aria-controls="sidebar-menu-two">
                         <i class="fas fa-mug menu-icon"></i>
-                        <span class="menu-title">İçecekler</span>
+                        <span class="menu-title">Proje Ayarları</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="collapse" id="sidebar-menu-two">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"><a class="nav-link" href="">İçecek Listesi</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('admin.show.product')}}">Proje Listesi</a></li>
+                        </ul>
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="{{route('admin.add.product')}}">Proje Ekle</a></li>
                         </ul>
                     </div>
                 </li>
@@ -345,28 +351,31 @@
                     <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-menu-three" aria-expanded="false"
                        aria-controls="sidebar-menu-three">
                         <i class="menu-icon fas fa-egg-fried"></i>
-                        <span class="menu-title">Kahvaltılıklar</span>
+                        <span class="menu-title">Galeri Ayarları</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="collapse" id="sidebar-menu-three">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"><a class="nav-link" href="">Kahvaltılık Listesi</a></li>
+                            <li class="nav-item"><a class="nav-link" href="">Fotoğraflar</a></li>
+                        </ul>
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="{{route('admin.add.images')}}">Fotoğraf ekle</a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item">
+                <!--<li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-menu-four" aria-expanded="false"
                        aria-controls="sidebar-menu-three">
                         <i class="fas fa-cheeseburger menu-icon"></i>
-                        <span class="menu-title">Ana Yemekler</span>
+                        <span class="menu-title">Gelen Kutusu</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="collapse" id="sidebar-menu-four">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"><a class="nav-link" href="">Ana Yemek Listesi</a></li>
+                            <li class="nav-item"><a class="nav-link" href="">Mesaj Listesi</a></li>
                         </ul>
                     </div>
-                </li>
+                </li>-->
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-menu-five" aria-expanded="false"
                        aria-controls="sidebar-menu-three">
@@ -384,7 +393,7 @@
                     <a class="nav-link" data-bs-toggle="collapse" href="" aria-expanded="false"
                        aria-controls="sidebar-menu-three">
                         <i class="fas fa-empty-set menu-icon"></i>
-                        <span class="menu-title">Stokta Olmayanlar</span>
+                        <span class="menu-title">Pasif Projeler</span>
                         <i class="menu-arrow"></i>
                     </a>
                 </li>
