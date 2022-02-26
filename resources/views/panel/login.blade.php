@@ -21,7 +21,7 @@
     <link href="{{asset('panel_assets/css/style.css')}}" rel="stylesheet">
 </head>
 <body>
-<form method="post" action="{{route('panel.loginpost')}}" >
+<form method="post" action="{{route('loginpost')}}" >
     <div class="login-body">
         @csrf
         <div class="login-modal">
@@ -36,7 +36,7 @@
                 <input name="password" id="password" class="check-password" type="password">
                 <label for="password">Şifre</label>
             </div>
-            <button type="submit" href="">Oturumu Aç</button>
+            <button type="submit" >Oturumu Aç</button>
         </div>
     </div>
 </form>

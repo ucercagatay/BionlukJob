@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('adress');
             $table->string('facebook_url');
-            $table->string('');
+            $table->string('twitter_url');
+            $table->string('behance_url');
 
             $table->timestamps();
         });
