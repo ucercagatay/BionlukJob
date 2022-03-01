@@ -98,7 +98,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("../../front/img/about-bg.jpg");
     background-size: cover;
 }
 
@@ -109,7 +108,7 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(206, 170, 77, 0.4);
+    background-color: rgba(200, 200, 200, 0.6);
 }
 
 .login-body .login-modal {

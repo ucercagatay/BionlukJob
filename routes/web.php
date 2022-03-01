@@ -20,7 +20,7 @@ use App\Http\Controllers\back\UserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front.welcome');
 });
 //Front Routes
 Route::controller(PageController::class)->group(function () {
