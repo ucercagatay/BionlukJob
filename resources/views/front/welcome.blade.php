@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Konferans</title>
-    <link rel="icon" href="./images/logo.ico" type="image/x-icon">
+    <link rel="icon" href="{{asset('image/logo.ico')}}" type="image/x-icon">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,16 +19,13 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <body>
 <header>
     <div class="header">
         <a class="head-logo" href="">
-            <img
-                src="https://manoverboard.com/images/manoverboard-logo-white.svg?_cchid=568a00774965bff04763db9cf9d936c1"
-                alt="">
+            <img src="{{asset('image/logo.png')}}" alt="">
+            <img src="{{asset('image/logoText.png')}}" alt="">
         </a>
         <div class="head-buttons">
             <a href="">
@@ -67,10 +64,10 @@
             <span class="headerHome__bottomLine"></span>
         </div>
         <div class="slider-buttons">
-            <a href="">
+            <a id="prev">
                 <i class="fal fa-chevron-left"></i>
             </a>
-            <a href="">
+            <a id="next">
                 <i class="fal fa-chevron-right"></i>
             </a>
         </div>
@@ -93,12 +90,37 @@
                     yet, we will do our best to gain the required knowledge in the blink of an eye, just to meet your
                     expectations.</p></div>
         </div>
+        <div class="persons">
+            <div class="person">
+                <img src="{{asset('front/img/about1.png')}}" alt="">
+                <h5>FEHMİ BULDUK</h5>
+                <h5>MİMARİ GÖRSELLEŞTİRME UZMANI</h5>
+                <h5>ARCVIZ ARTIST</h5>
+            </div>
+            <div class="person">
+                <img src="{{asset('front/img/about2.png')}}" alt="">
+                <h5>İBRAHİM SOLAK</h5>
+                <h5>MİMARİ GÖRSELLEŞTİRME UZMANI</h5>
+                <h5>ARCVIZ ARTIST</h5>
+            </div>
+            <div class="person">
+                <img src="{{asset('front/img/about3.png')}}" alt="">
+                <h5>CEREN ÇOLAK</h5>
+                <h5>MİMAR</h5>
+                <h5>ARCHITECT</h5>
+            </div>
+            <div class="person">
+                <img src="{{asset('front/img/about4.png')}}" alt="">
+                <h5>ÖZGE YAVUZ</h5>
+                <h5>MİMAR</h5>
+                <h5>ARCHITECT</h5>
+            </div>
+        </div>
     </div>
     <div class="bernardShaw" id="bernardShaw">
         <div class="firstDiv">
-            <img
-                src="https://manoverboard.com/images/manoverboard-logo-black.svg?_cchid=581cda2a45142441c5782898814e80c7"
-                alt="">
+            <img src="{{asset('image/logoTextBlack.png')}}" alt="">
+
         </div>
         <div class="secondDiv">
             <h3 class="animate__fadeInUp"> Without art, the crudeness of reality would make the world unbearable.</h3>
@@ -107,22 +129,62 @@
         </div>
         <div class="bernardShawPhoto">
             <img src="{{asset('front/img/bernard.jfif')}}" alt="">
-            <h4>George Bernard Shaw</h4>
         </div>
     </div>
     <div class="projects">
-      @foreach($categories as $category)
-            <a href="">
-                <div class="project">
-                    <img src="{{asset($category->mainpage_photo)}}" alt="">
-                    <div class="project-text">
-                        <h3>{{$category->name}}</h3>
-                        <p>{{$category->box_text}}</p>
-                        <div> <i class="fad fa-long-arrow-alt-right"></i> More information</div>
-                    </div>
+        <a href="">
+            <div class="project">
+                <img src="{{asset('front/img/assembly.jpg')}}" alt="">
+                <div class="project-text">
+                    <h3>Interior Visualization</h3>
+                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
+                    <div><i class="fad fa-long-arrow-alt-right"></i> More information</div>
                 </div>
-            </a>
-       @endforeach
+            </div>
+        </a>
+        <a href="">
+            <div class="project">
+                <img src="{{asset('front/img/blog1.jpg')}}" alt="">
+                <div class="project-text">
+                    <h3>Interior Visualization</h3>
+                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
+                    <div><i class="fad fa-long-arrow-alt-right"></i> More information</div>
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="project">
+                <img src="{{asset('front/img/count.jpg')}}" alt="">
+                <div class="project-text">
+                    <h3>Interior Visualization</h3>
+                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
+                    <div><i class="fad fa-long-arrow-alt-right"></i> More information</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="beforeafter">
+        <h2 class="sliderTwoPhotos__title">exterior</h2>
+        <div id="two" class="bal-container">
+            <div class="bal-after">
+                <img src="{{asset('front/img/main3.png')}}">
+                <div class="bal-afterPosition afterLabel">
+                    After
+                </div>
+            </div>
+            <div class="bal-before">
+                <div class="bal-before-inset">
+                    <img src="{{asset('front/img/main.jpg')}}">
+                    <div class="bal-beforePosition beforeLabel">
+                        Before
+                    </div>
+
+                </div>
+            </div>
+            <div class="bal-handle">
+                <img src="{{asset('image/logo.png')}}" alt="">
+            </div>
+        </div>
     </div>
     <div class="contact">
         <div class="contact-social">
@@ -137,53 +199,61 @@
                 </div>
             </div>
             <div>
-                <img
-                    src="https://manoverboard.com/images/manoverboard-logo-white.svg?_cchid=568a00774965bff04763db9cf9d936c1"
-                    alt="">
+                <img src="{{asset('image/logoText.png')}}" alt="">
                 <ul>
                     <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href=""><i class="fab fa-twitter"></i></a></li>
                     <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li></ul>
+                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
             </div>
         </div>
         <div class="contact-form">
 
         </div>
     </div>
+    {{--    <div class="contact-links">--}}
+    {{--        <div>--}}
+    {{--            <a href="">About Us <i class="fad fa-long-arrow-alt-right"></i></a>--}}
+    {{--        </div>--}}
+    {{--        <div>--}}
+    {{--            <a href="">Services <i class="fad fa-long-arrow-alt-right"></i></a>--}}
+    {{--        </div>--}}
+    {{--        <div>--}}
+    {{--            <a href="">Contact Us <i class="fad fa-long-arrow-alt-right"></i></a>--}}
+    {{--        </div>--}}
+    {{--    </div>--}}
+    <div class="footer__wrapper">
+        <div class="footer__content container">
+            <div class="footer__top">
+                <div class="footer__topLeft">
+                    <img class="footer__topLogo" src="{{asset('image/logoText.png')}}" alt="">
+
+                    <ul class="footer__topScope">
+                        <li class="footer__topScopeItem">
+                            <a class="footer__topScopeLink" href="https://drowart.com/services#interior" target="_self">Interior visualization </a>
+                        </li>
+                        <li class="footer__topScopeItem">
+                            <a class="footer__topScopeLink" href="https://drowart.com/services#exterior" target="_self">Exterior visualization </a>
+                        </li>
+                        <li class="footer__topScopeItem">
+                            <a class="footer__topScopeLink" href="https://drowart.com/services#animation" target="_self"> 3D animation </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__topRight">
+                    <p class="footer__topRightTitle">Contact us</p>
+                    <a href="mailto:info@drowart.com" class="footer__topRightLink footer__topRightLink--email">info@drowart.com</a>
+                    <a href="skype:live:.cid.cf298a4729b5592a?call" class="footer__topRightSkype">
+                        <span class="footer__topRightSkypeIcon icon-skype"></span>
+                    </a>
+                    <a href="tel:+48720880075" style="color: white; font-size: 20px; margin-top: -5px" class="footer__topRightLink">(+48) 720 880 075</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
-{{--<div class="mobil-menu">--}}
-{{--    <div class="side-menu">--}}
-{{--        <div class="closeButton">--}}
-{{--            <a class="closeSide"><i class="far fa-times"></i></a>--}}
-{{--        </div>--}}
-{{--        <ul>--}}
-{{--            <li><a >Ana Sayfa</a>--}}
-{{--                <ul>--}}
-{{--                    <li><a href="">Ana Sayfa</a></li>--}}
-{{--                    <li><a href="">Takvim</a></li>--}}
-{{--                    <li><a href="">Konuşmacılar</a></li>--}}
-{{--                    <li><a href="">Venue</a></li>--}}
-{{--                    <li><a href="">Blog</a></li>--}}
-{{--                </ul>--}}
-{{--            </li>--}}
-{{--            <li><a >Takvim</a></li>--}}
-{{--            <li><a >Konuşmacılar</a></li>--}}
-{{--            <li><a >Venue</a></li>--}}
-{{--            <li><a >Blog</a></li>--}}
-{{--            <button>Bilet Satın Al</button>--}}
-{{--        </ul>--}}
-{{--        <div>--}}
-{{--            <ul>--}}
-{{--                <li class="facebook"><a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a></li>--}}
-{{--                <li class="twitter"><a target="_blank" href="http://twitter.com/#"><i class="fab fa-twitter"></i></a></li>--}}
-{{--                <li class="youtube"><a target="_blank" href="#"><i class="fab fa-youtube"></i></a></li>--}}
-{{--                <li class="linkedin"><a target="_blank"  href="#"><i class="fab fa-linkedin-in"></i></a></li>--}}
-{{--                <li class="instagram"><a target="_blank" href="http://instagram.com/tedxvienna"><i class="fab fa-instagram"></i></a></li>--}}
-{{--            </ul>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
+
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -205,7 +275,8 @@
 
     var temp = 1;
     $(window).scroll(function () {
-        if ($(window).scrollTop() < $(window).height() && temp) {
+        console.log($(window).height() * 3)
+        if ($(window).scrollTop() < $(window).height() * 3 && temp) {
             $('.firstDiv').addClass('active')
             setTimeout(() => {
                 bernard()
@@ -216,36 +287,52 @@
     });
 </script>
 <script>
-    const news = document.querySelectorAll('.slide');
-    var slideInterval
-    let intervalTime = 10000
+    const slides = document.querySelectorAll('.slide');
+    const next = document.getElementById('next');
+    const prev = document.getElementById('prev');
+    const auto = true;
+    const intervalTime = 5000;
+    let slideInterval;
+
     const nextSlide = () => {
-
-        clearInterval(slideInterval)
-
-        slideInterval = setInterval(() => {
-            const activeSlide = document.querySelector('.slide.active');
-            activeSlide.classList.remove('active');
-            if (activeSlide.nextElementSibling) {
-                activeSlide.nextElementSibling.classList.add('active');
-            } else {
-                news[0].classList.add('active');
-            }
-            intervalTime = 10000
-        }, intervalTime)
+        const activeSlide = document.querySelector('.slide.active');
+        activeSlide.classList.remove('active');
+        if (activeSlide.nextElementSibling) {
+            activeSlide.nextElementSibling.classList.add('active');
+        } else {
+            slides[0].classList.add('active');
+        }
     }
 
-    slideInterval = setInterval(nextSlide(), intervalTime)
-</script>
-<script>
-    $('.side').removeClass();
-    $(".side-menu>ul>li>a").click(function (event) {
-        if ($(event.currentTarget.nextElementSibling).hasClass("active")) {
-            $(event.currentTarget.nextElementSibling).removeClass("active");
+    const prevSlide = () => {
+        const activeSlide = document.querySelector('.slide.active');
+        activeSlide.classList.remove('active');
+        if (activeSlide.previousElementSibling) {
+            activeSlide.previousElementSibling.classList.add('active');
         } else {
-            $(event.currentTarget.nextElementSibling).addClass("active")
+            slides[slides.length - 1].classList.add('active');
         }
+    }
+
+    next.addEventListener('click', () => {
+        nextSlide();
+        if (auto) {
+            clearInterval(slideInterval)
+            slideInterval = setInterval(nextSlide, intervalTime)
+        }
+    });
+
+    prev.addEventListener('click', () => {
+        if (auto) {
+            clearInterval(slideInterval)
+            slideInterval = setInterval(nextSlide, intervalTime)
+        }
+        prevSlide();
     })
+
+    if (auto) {
+        slideInterval = setInterval(nextSlide, intervalTime)
+    }
 </script>
 <script>
     AOS.init();
@@ -261,16 +348,65 @@
         });
     }
 </script>
-{{--<script>--}}
-{{--    $("#mobil-menu").click(function(){--}}
-{{--        $(".mobil-menu").addClass("opened")--}}
-{{--        $("header").css("filter","blur(10px)");--}}
-{{--        $("main").css("filter","blur(10px)");--}}
-{{--    })--}}
-{{--    $(".closeSide").click(function(){--}}
-{{--        $(".mobil-menu").removeClass("opened")--}}
-{{--        $("header").css("filter","blur(0px)");--}}
-{{--        $("main").css("filter","blur(0px)");--}}
-{{--    })--}}
-{{--</script>--}}
+<script>
+
+    class BeforeAfter {
+        constructor(enteryObject) {
+
+            const beforeAfterContainer = document.querySelector(enteryObject.id);
+            const before = beforeAfterContainer.querySelector('.bal-before');
+            const beforeText = beforeAfterContainer.querySelector('.bal-beforePosition');
+            const afterText = beforeAfterContainer.querySelector('.bal-afterPosition');
+            const handle = beforeAfterContainer.querySelector('.bal-handle');
+            var widthChange = 0;
+
+            beforeAfterContainer.querySelector('.bal-before-inset').setAttribute("style", "width: " + beforeAfterContainer.offsetWidth + "px;")
+            window.onresize = function () {
+                beforeAfterContainer.querySelector('.bal-before-inset').setAttribute("style", "width: " + beforeAfterContainer.offsetWidth + "px;")
+            }
+            before.setAttribute('style', "width: 50%;");
+            handle.setAttribute('style', "left: 50%;");
+
+            //touch screen event listener
+            beforeAfterContainer.addEventListener("touchstart", (e) => {
+
+                beforeAfterContainer.addEventListener("touchmove", (e2) => {
+                    let containerWidth = beforeAfterContainer.offsetWidth;
+                    let currentPoint = e2.changedTouches[0].clientX;
+
+                    let startOfDiv = beforeAfterContainer.offsetLeft;
+
+                    let modifiedCurrentPoint = currentPoint - startOfDiv;
+
+                    if (modifiedCurrentPoint > 10 && modifiedCurrentPoint < beforeAfterContainer.offsetWidth - 10) {
+                        let newWidth = modifiedCurrentPoint * 100 / containerWidth;
+
+                        before.setAttribute('style', "width:" + newWidth + "%;");
+                        afterText.setAttribute('style', "z-index: 1;");
+                        handle.setAttribute('style', "left:" + newWidth + "%;");
+                    }
+                });
+            });
+
+            //mouse move event listener
+            beforeAfterContainer.addEventListener('mousemove', (e) => {
+                let containerWidth = beforeAfterContainer.offsetWidth;
+                widthChange = e.offsetX;
+                let newWidth = widthChange * 100 / containerWidth;
+
+                if (e.offsetX > 10 && e.offsetX < beforeAfterContainer.offsetWidth - 10) {
+                    before.setAttribute('style', "width:" + newWidth + "%;");
+                    afterText.setAttribute('style', "z-index:" + "1;");
+                    handle.setAttribute('style', "left:" + newWidth + "%;");
+                }
+            })
+
+        }
+    }
+</script>
+<script>
+    new BeforeAfter({
+        id: '#two'
+    });
+</script>
 </html>
