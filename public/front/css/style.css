@@ -23,7 +23,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-    background: #ea2929;
+    background: #31AFF2;
 }
 body{
     width: 100%;
@@ -88,7 +88,7 @@ header .header .head-buttons a:first-child{
     cursor: pointer;
 }
 header .header .head-buttons a:first-child:hover{
-    color: #ea2929;
+    color: #31AFF2;
 }
 header .header .head-buttons a h3{
     font-family: 'League Spartan', sans-serif;
@@ -121,7 +121,7 @@ header .header .head-buttons a:last-child span:nth-child(3){
     margin-top: 5px;
 }
 header .header .head-buttons a:last-child:hover span{
-    background-color: #ea2929;
+    background-color: #31AFF2;
 }
 header .header .head-buttons a:last-child:hover span:nth-child(1){
     width: 14px;
@@ -130,7 +130,9 @@ header .header .head-buttons a:last-child:hover span:nth-child(1){
 header .header .head-buttons a:last-child:hover span:nth-child(2){
     width: 18px;
 }
-
+#fullMenu{
+    cursor: pointer;
+}
 .slider{
     width: 100%;
     position: relative;
@@ -229,7 +231,7 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     color: black;
 }
 .slider .slider-buttons a:hover{
-    background-color: #ea2929;
+    background-color: #31AFF2;
 }
 .slider .slider-buttons a:hover i{
     color: white;
@@ -297,7 +299,7 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     left: 0;
     width: 50%;
     height: 100%;
-    background-color: #ea2929;
+    background-color: #31AFF2;
 }
 @keyframes scroll{
     from{
@@ -313,7 +315,7 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     width: 100%;
     height: 65vh;
     padding: 50px 150px;
-    background-color: #F9F2ED;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -350,7 +352,7 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
 .bernardShaw .secondDiv h3{
     margin-top: 60px;
     transition: 600ms all;
-    font-size: 75px;
+    font-size: 4vw;
     font-weight: 600;
 }
 .bernardShaw .secondDiv h3:nth-child(1){
@@ -397,7 +399,6 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
 }
 .titleDesc{
     padding: 150px;
-    height: 100vh;
 }
 .titleDesc__inner {
     display: flex;
@@ -427,7 +428,7 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     bottom: 0;
     width: 77px;
     height: 2px;
-    background-color: #ea2929;
+    background-color: #31AFF2;
 }
 .titleDesc__titleBig {
     position: absolute;
@@ -452,6 +453,9 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
 .persons{
     display: flex;
     margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .person{
     width: calc(94% / 4);
@@ -518,7 +522,7 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     position: absolute;
     bottom: 18vh;
     transition: 500ms all;
-    width: 50%;
+    width: 260px;
     font-size: 40px;
     color: white;
 }
@@ -531,7 +535,7 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     color: white;
     font-size: 23px;
     font-weight: 300;
-    width: 70%;
+    width: 260px;
 }
 .projects .project .project-text div{
     position: absolute;
@@ -543,17 +547,17 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     color: white;
     padding: 10px;
     border-radius: 50%;
-    border: 1px solid #ea2929;
+    border: 1px solid #31AFF2;
     transition: 500ms all;
     font-size: 23px;
     margin-right: 10px;
 }
 .projects .project:hover .project-text div i{
-    background-color: #ea2929;
+    background-color: #31AFF2;
 }
 .projects .project:hover .project-text h3{
     position: absolute;
-    bottom: 25vh;
+    bottom: 30vh;
 }
 .projects .project:hover .project-text p{
     position: absolute;
@@ -565,13 +569,15 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
 .contact{
     display: flex;
     height: 80vh;
+    justify-content: space-between;
 }
 .contact .contact-social{
     width: 33.33%;
     position: relative;
 }
 .contact .contact-form{
-    width: 65%;
+    width: 50%;
+    padding-right: 150px;
 }
 .contact .contact-social{
     background-image: url("../img/image0.jpeg");
@@ -645,7 +651,7 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     border-radius: 50%;
 }
 .contact .contact-social>div:last-child ul a:hover{
-    background-color: #ea2929;
+    background-color: #31AFF2;
 }
 .contact .contact-social>div:last-child ul a i{
     color: white;
@@ -679,7 +685,7 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #ea2929;
+    background-color: #31AFF2;
     z-index: -1;
     transition: left .3s;
 }
@@ -997,15 +1003,7 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     background-color: #121416;
     color: #fff;
 }
-.container {
-    width: 100%;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 150px;
-    padding-right: 150px;
-    box-sizing: border-box;
-}
+
 .footer__top {
     display: flex;
     justify-content: space-between;
@@ -1030,7 +1028,7 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     font-weight: 500;
 }
 .footer__topRightLink--email, .footer__topRightLink:hover {
-    color: #ff3f3d;
+    color: #31AFF2;
     text-decoration: underline;
 }
 .footer__topRightLink--email {
@@ -1089,4 +1087,558 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
 .footer__goTopIcon {
     font-size: 12px;
     color: #fff;
+}
+
+.table-bordered td p, .table-bordered th p {
+    height: 185px;
+    overflow: scroll;
+}
+
+.card.shadow.mb-4 div {
+    display: flex;
+    margin-bottom: 2vh;
+}
+
+.card.shadow.mb-4 h3 {
+    margin-bottom: 2vh;
+    font-weight: bolder;
+    color: black;
+    border-bottom: 1px solid black;
+    width: 300px
+}
+
+.card.shadow.mb-4 form {
+    margin-left: 4vh;
+}
+
+.card.shadow.mb-4 div label {
+    margin-right: 2vh;
+}
+
+.card.shadow.mb-4 input, .card.shadow.mb-4 select, .card.shadow.mb-4 textarea {
+    outline: none;
+}
+
+.login-body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.login-body:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(200, 200, 200, 0.6);
+}
+
+.contact-form div {
+    display: flex;
+    padding: 0 ;
+    margin-bottom: 4vh;
+}
+.contact-form h4{
+    font-size: 40px;
+    margin: 100px 0;
+    font-weight: 700;
+    position: relative;
+}
+.contact-form h4:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 9.2rem;
+    height: 0.2rem;
+    background-color: #31AFF2;
+}
+.contact-form div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 0 2vh 0;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: #282826;
+    margin-bottom: 1vh;
+}
+
+.contact-form div img {
+    width: 75%;
+}
+
+.contact-form a {
+    margin-bottom: 4vh;
+}
+.contact-form div label{
+    position: absolute;
+    background: transparent;
+    color: rgba(18,20,22,.8);
+    margin: 6px 0 0 0px;
+    transition: 500ms all;
+    padding: 2px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+.contact-form div input{
+    background:transparent;
+    border: none;
+    border-bottom: 1px solid #cfd6da;
+    color: white;
+    outline: none;
+    width: 100%;
+    height: 45px;
+    padding: 0 ;
+    transition: 200ms all;
+}
+.contact-form button{
+    color: #282826;
+    padding: 6px 14px;
+    border: 1px solid white;
+    background-color:white;
+    margin-bottom: 4vh;
+    transition: 300ms all;
+    cursor: pointer;
+}
+.contact-form button:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    text-decoration: none;
+}
+.contact-form div input:focus + label{
+    margin-top: -13px !important;
+    font-size: 15px !important;
+}
+.inputhover{
+    margin-top: -13px !important;
+    font-size: 15px !important;
+    color: #CEAA4D !important;
+}
+.contact-form div:nth-child(n+2){
+    width: 100%;
+}
+.contact-form div:last-child input{
+    height: 125px;
+}
+.contact-form .button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 35px;
+    border: 1px solid #cfd6da;
+    font-size: 11px;
+    line-height: 11px;
+    font-weight: 700;
+    letter-spacing: .01em;
+    transition: border .3s;
+}
+.contact-form .button:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #31AFF2;
+    transition: width .3s;
+}
+.contact-form .button:hover {
+    border: 1px solid #31AFF2;
+}
+.contact-form .button:hover span{
+    color: white;
+    z-index: 88;
+}
+.contact-form .button:hover:before {
+    width: calc(100% + 1px);
+}
+
+.counter-box{
+}
+
+.counter-box .message:nth-of-type(1){
+    width: 200px;
+    border-left: 1px solid black;
+    padding: 0px 25px;
+}
+
+.counter-box .message:nth-of-type(3){
+    margin: 65px 0px;
+    text-align: right;
+    width: 100%;
+}
+.counter-box .message:nth-of-type(4){
+    margin: -60px 0px;
+    text-align: right;
+    width: 100%;
+}
+.counter-box .message span{
+    font-size: 28px;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.counter-box .message span b{
+    font-weight: normal;
+    letter-spacing: 10px;
+}
+
+.counter-box .message span b:before{
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: #31AFF2;
+    transform: rotate(-1deg);
+    margin: 15px -5px;
+
+}
+
+#counter{
+    display: flex;
+    margin: 80px 0px 120px;
+}
+
+.day, .hou, .min, .sec{
+    width: 100%;
+}
+
+#counter .time{
+    color: #31AFF2;
+    padding: 10px;
+    font-size: 137px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+}
+
+#counter .call{
+    font-size: 20px;
+    color: #535353;
+    text-transform: uppercase;
+    float: left;
+    margin: -15px 10px 0px;
+    text-align: center;
+    width: 100%;
+}
+
+header .container{
+    margin: 40px;
+}
+
+.pulse{
+    color:red;
+    animation: pound 0.35s infinite alternate;
+    -webkit-animation: pound 0.35s infinite alternate;
+}
+@-webkit-keyframes pound {
+    to {
+        transform: scale(1.1);
+    }
+}
+@keyframes pound {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+
+.loading-page {
+    background: #FFF;
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 999999999999;
+    position: fixed;
+}
+.loading-page .counter {
+    text-align: center;
+}
+.loading-page .counter h1 {
+    color: #080808;
+    font-size: 20px;
+    margin-top: -10px;
+}
+.loading-page .counter hr {
+    background: #080808;
+    border: none;
+    height: 1px;
+}
+.loading-page .counter {
+    position: relative;
+    width: 200px;
+}
+.loading-page .counter h1.abs {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.loading-page .counter .color {
+    width: 0px;
+    overflow: hidden;
+    color: #f60d54;
+}
+.full-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #121416;
+    z-index: 88888;
+    opacity: 0;
+    visibility: hidden;
+    transition: 500ms all;
+}
+#closeFull{
+    cursor: pointer;
+}
+.full-menu.active{
+    opacity: 1;
+    visibility: visible;
+}
+.full-menu header .header .head-buttons a:first-child{
+    border: none;
+}
+.full-menu header .header .head-buttons i{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.mainMenu__nav {
+    margin-left: 200px;
+}
+.mainMenu__navLink {
+    display: inline-flex;
+    margin-bottom: 25px;
+    position: relative;
+    font-size: 60px;
+    line-height: 98px;
+    color: #fff;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: color .3s;
+}
+.mainMenu__navLink span {
+    position: absolute;
+    left: 0;
+    color: #31AFF2;
+    width: 0;
+    overflow: hidden;
+    transition: width .3s;
+    background: #121416;
+    white-space: nowrap;
+}
+.mainMenu__navLink--active span, .mainMenu__navLink:hover span {
+    width: 100%;
+}
+.mainMenu__contentSocials {
+    margin-left: auto;
+    padding-right: 160px;
+}
+.mainMenu__socialsTitle {
+    margin-bottom: 26px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #31AFF2;
+}
+.mainMenu__socialsLink {
+    display: inline-flex;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+    color: #fff;
+    transition: color .3s;
+}
+.mainMenu__socialsLink--icon {
+    display: none;
+}
+.mainMenu__socialsLink:hover {
+    color: #31AFF2;
+}
+.mainMenu__content {
+    display: flex;
+    align-items: center;
+    margin-top: 25vh;
+}
+@media only screen and (max-width: 1024px) {
+    .slider .slide .slide-text{
+        padding: 12vh 20px;
+    }
+    .bernardShaw{
+        padding: 50px 20px;
+    }
+    .titleDesc{
+        padding: 75px 20px;
+    }
+    .beforeafter{
+        padding: 30px 20px;
+    }
+    .slider .slider-foot{
+        padding: 20px;
+    }
+    .contact .contact-social .contact-us,
+    .contact .contact-social>div:last-child{
+        width: 85%;
+    }
+    .projects{
+        height: max-content;
+        display: block;
+    }
+    .bernardShaw .secondDiv.active h3:nth-child(2){
+        margin-top: 40px;
+    }
+    .projects .project img{
+        height: 85vh;
+    }
+    header{
+        background-color: #121416;
+        box-shadow: 0 5px 25px 0 rgb(115 121 134 / 10%);
+    }
+    header .header .head-logo{
+        flex-direction: row;
+    }
+    .contact{
+        height: max-content;
+    }
+    .person{
+        width: calc(97% / 2);
+    }
+    .mainMenu__nav{
+        margin-left: 20px;
+    }
+    .mainMenu__navLink{
+        line-height: 60px;
+    }
+    .mainMenu__contentSocials{
+        padding-right: 20px;
+    }
+    .mainMenu__socialsLink{
+        margin-bottom: 0px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .mainMenu__content{
+        flex-direction: column;
+    }
+    .mainMenu__socialsTitle{
+        margin-bottom: 5px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    header{
+        padding: 15px;
+    }
+    header .header .head-logo img:first-child{
+        height: 55px;
+    }
+    header .header .head-logo img:last-child{
+        height: 10px;
+    }
+    header .header .head-buttons a h3{
+        font-size: 20px;
+    }
+    header .header .head-buttons a:first-child{
+        padding: 0 10px;
+    }
+    .headerHome__bottomLine{
+        display: none;
+    }
+    .headerHome__scroll{
+        left: calc(70vw + 15px);
+    }
+    .bernardShaw{
+        flex-direction: column;
+        height: max-content;
+    }
+    .bernardShaw .bernardShawPhoto{
+        order: 1;
+    }
+    .bernardShaw .secondDiv{
+        order: 2;
+    }
+    .bernardShaw .secondDiv h3{
+        font-size: 35px;
+    }
+    .bernardShaw .bernardShawPhoto img{
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+    }
+    .slider .slide .slide-text h2{
+        width: 80%;
+        font-size: 50px;
+        line-height: 40px;
+    }
+    .titleDesc__titleBig,
+    .sliderTwoPhotos__title{
+        font-size: 100px;
+    }
+    .titleDesc__inner{
+        flex-direction: column;
+    }
+    .titleDesc__title{
+        max-width: 90%;
+    }
+    .titleDesc__desc{
+        max-width: 90%;
+    }
+    .person img{
+        height: 350px;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact .contact-social{
+        width: 100%;
+        order: 2;
+    }
+    .contact .contact-form{
+        width: 100%;
+        order: 1;
+        padding: 0 35px;
+    }
+    .contact .contact-social>div:last-child{
+        margin-top: 50px;
+    }
+    .person{
+        width: 100%;
+    }
+    .footer__topScopeLink,
+    .footer__topRightTitle{
+        font-size: 15px;
+    }
+    .footer__topRightLink{
+        font-size: 18px !important;
+    }
+    .footer__topLogo{
+        width: 161px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .titleDesc__titleBig,
+    .sliderTwoPhotos__title{
+        font-size: 75px;
+    }
 }

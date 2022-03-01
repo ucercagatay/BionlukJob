@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Konferans</title>
+    <title>HERMESARTSTUDIO</title>
     <link rel="icon" href="{{asset('image/logo.ico')}}" type="image/x-icon">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -21,6 +21,12 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <body>
+<div class='loading-page'>
+    <div class='counter'>
+        <h1>0%</h1>
+        <hr>
+    </div>
+</div>
 <header>
     <div class="header">
         <a class="head-logo" href="">
@@ -32,7 +38,7 @@
                 <h3>Projeler</h3>
                 <i class="fal fa-boxes"></i>
             </a>
-            <a href="">
+            <a id="fullMenu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -41,6 +47,7 @@
     </div>
 </header>
 <main>
+
     <div class="slider">
         <div class="slide-inner">
             <div class="slide active">
@@ -71,9 +78,57 @@
                 <i class="fal fa-chevron-right"></i>
             </a>
         </div>
-        <a class="headerHome__scroll" href="#titleDesc">
+        <a class="headerHome__scroll" href="#bernardShaw">
             <div class="headerHome__scrollIcon"></div>
             <div class="headerHome__scrollText">Scroll down</div>
+        </a>
+    </div>
+    <div class="bernardShaw" id="bernardShaw">
+        <div class="firstDiv">
+            <img src="{{asset('image/logoTextBlack.png')}}" alt="">
+
+        </div>
+        <div class="secondDiv">
+            <h3 class=" animate__animated animate__pulse"> Without art, the crudeness of reality would make the world
+                unbearable.</h3>
+
+            <h3 class=" animate__animated animate__pulse">Sanat olmasaydı, gerçeğin çiğliği dünyayı dayanılmaz hale
+                getirirdi.</h3>
+        </div>
+        <div class="bernardShawPhoto">
+            <img src="{{asset('front/img/bernard.jfif')}}" alt="">
+        </div>
+    </div>
+    <div class="projects" id="projects">
+        <a href="" data-aos="fade-up">
+            <div class="project">
+                <img src="{{asset('front/img/assembly.jpg')}}" alt="">
+                <div class="project-text">
+                    <h3>Interior Visualization</h3>
+                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
+                    <div><i class="fad fa-long-arrow-alt-right"></i> More information</div>
+                </div>
+            </div>
+        </a>
+        <a href="" data-aos="fade-up">
+            <div class="project">
+                <img src="{{asset('front/img/blog1.jpg')}}" alt="">
+                <div class="project-text">
+                    <h3>Interior Visualization</h3>
+                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
+                    <div><i class="fad fa-long-arrow-alt-right"></i> More information</div>
+                </div>
+            </div>
+        </a>
+        <a href="" data-aos="fade-up">
+            <div class="project">
+                <img src="{{asset('front/img/count.jpg')}}" alt="">
+                <div class="project-text">
+                    <h3>Interior Visualization</h3>
+                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
+                    <div><i class="fad fa-long-arrow-alt-right"></i> More information</div>
+                </div>
+            </div>
         </a>
     </div>
     <div class="titleDesc" id="titleDesc">
@@ -91,25 +146,25 @@
                     expectations.</p></div>
         </div>
         <div class="persons">
-            <div class="person">
+            <div class="person" data-aos="fade-up">
                 <img src="{{asset('front/img/about1.png')}}" alt="">
                 <h5>FEHMİ BULDUK</h5>
                 <h5>MİMARİ GÖRSELLEŞTİRME UZMANI</h5>
                 <h5>ARCVIZ ARTIST</h5>
             </div>
-            <div class="person">
+            <div class="person" data-aos="fade-up">
                 <img src="{{asset('front/img/about2.png')}}" alt="">
                 <h5>İBRAHİM SOLAK</h5>
                 <h5>MİMARİ GÖRSELLEŞTİRME UZMANI</h5>
                 <h5>ARCVIZ ARTIST</h5>
             </div>
-            <div class="person">
+            <div class="person" data-aos="fade-up">
                 <img src="{{asset('front/img/about3.png')}}" alt="">
                 <h5>CEREN ÇOLAK</h5>
                 <h5>MİMAR</h5>
                 <h5>ARCHITECT</h5>
             </div>
-            <div class="person">
+            <div class="person" data-aos="fade-up">
                 <img src="{{asset('front/img/about4.png')}}" alt="">
                 <h5>ÖZGE YAVUZ</h5>
                 <h5>MİMAR</h5>
@@ -117,53 +172,7 @@
             </div>
         </div>
     </div>
-    <div class="bernardShaw" id="bernardShaw">
-        <div class="firstDiv">
-            <img src="{{asset('image/logoTextBlack.png')}}" alt="">
-
-        </div>
-        <div class="secondDiv">
-            <h3 class="animate__fadeInUp"> Without art, the crudeness of reality would make the world unbearable.</h3>
-
-            <h3>Sanat olmasaydı, gerçeğin çiğliği dünyayı dayanılmaz hale getirirdi.</h3>
-        </div>
-        <div class="bernardShawPhoto">
-            <img src="{{asset('front/img/bernard.jfif')}}" alt="">
-        </div>
-    </div>
-    <div class="projects">
-        <a href="">
-            <div class="project">
-                <img src="{{asset('front/img/assembly.jpg')}}" alt="">
-                <div class="project-text">
-                    <h3>Interior Visualization</h3>
-                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
-                    <div><i class="fad fa-long-arrow-alt-right"></i> More information</div>
-                </div>
-            </div>
-        </a>
-        <a href="">
-            <div class="project">
-                <img src="{{asset('front/img/blog1.jpg')}}" alt="">
-                <div class="project-text">
-                    <h3>Interior Visualization</h3>
-                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
-                    <div><i class="fad fa-long-arrow-alt-right"></i> More information</div>
-                </div>
-            </div>
-        </a>
-        <a href="">
-            <div class="project">
-                <img src="{{asset('front/img/count.jpg')}}" alt="">
-                <div class="project-text">
-                    <h3>Interior Visualization</h3>
-                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
-                    <div><i class="fad fa-long-arrow-alt-right"></i> More information</div>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="beforeafter">
+    <div class="beforeafter" id="beforeAfter">
         <h2 class="sliderTwoPhotos__title">exterior</h2>
         <div id="two" class="bal-container">
             <div class="bal-after">
@@ -186,7 +195,7 @@
             </div>
         </div>
     </div>
-    <div class="contact">
+    <div class="contact" id="contact">
         <div class="contact-social">
             <div class="contact-us">
                 <h4>Contact us</h4>
@@ -209,7 +218,24 @@
             </div>
         </div>
         <div class="contact-form">
-
+            <h4>Bizimle İletişime Geçin</h4>
+            <div>
+                <input name="email" id="email" class="check-mail" type="text">
+                <label for="email">Ad-Soyad</label>
+            </div>
+            <div>
+                <input name="email" id="email" class="check-mail" type="email">
+                <label for="email">E-Posta</label>
+            </div>
+            <div>
+                <input name="email" id="email" class="check-mail" type="tel">
+                <label for="email">Telefon Numarası</label>
+            </div>
+            <div>
+                <input name="email" id="email" class="check-mail" type="text">
+                <label for="email">Mesaj</label>
+            </div>
+            <button type="submit" class="button"><span class="button__text">SEND MESSAGE</span></button>
         </div>
     </div>
     {{--    <div class="contact-links">--}}
@@ -231,13 +257,16 @@
 
                     <ul class="footer__topScope">
                         <li class="footer__topScopeItem">
-                            <a class="footer__topScopeLink" href="https://drowart.com/services#interior" target="_self">Interior visualization </a>
+                            <a class="footer__topScopeLink" href="https://drowart.com/services#interior" target="_self">Interior
+                                visualization </a>
                         </li>
                         <li class="footer__topScopeItem">
-                            <a class="footer__topScopeLink" href="https://drowart.com/services#exterior" target="_self">Exterior visualization </a>
+                            <a class="footer__topScopeLink" href="https://drowart.com/services#exterior" target="_self">Exterior
+                                visualization </a>
                         </li>
                         <li class="footer__topScopeItem">
-                            <a class="footer__topScopeLink" href="https://drowart.com/services#animation" target="_self"> 3D animation </a>
+                            <a class="footer__topScopeLink" href="https://drowart.com/services#animation"
+                               target="_self"> 3D animation </a>
                         </li>
                     </ul>
                 </div>
@@ -247,8 +276,85 @@
                     <a href="skype:live:.cid.cf298a4729b5592a?call" class="footer__topRightSkype">
                         <span class="footer__topRightSkypeIcon icon-skype"></span>
                     </a>
-                    <a href="tel:+48720880075" style="color: white; font-size: 20px; margin-top: -5px" class="footer__topRightLink">(+48) 720 880 075</a>
+                    <a href="tel:+48720880075" style="color: white; font-size: 20px; margin-top: -5px"
+                       class="footer__topRightLink">(+48) 720 880 075</a>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="full-menu">
+        <header>
+            <div class="header">
+                <a class="head-logo" href="">
+                    <img src="{{asset('image/logo.png')}}" alt="">
+                    <img src="{{asset('image/logoText.png')}}" alt="">
+                </a>
+                <div class="head-buttons">
+                    <a id="closeFull">
+                        <h3>Kapat</h3>
+                        <i class="fal fa-times"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="mainMenu__content container">
+            <div class="mainMenu__contentMenu">
+                <ul class="mainMenu__nav">
+                    <li class="mainMenu__navItem">
+                        <a href="#projects" target="_self" class="mainMenu__navLink "> Projeler
+                            <span>Projeler</span>
+                        </a>
+                    </li>
+                    <li class="mainMenu__navItem">
+                        <a href="#titleDesc" target="_self" class="mainMenu__navLink "> Hakkımızda
+                            <span>Hakkımızda</span>
+                        </a>
+                    </li>
+                    <li class="mainMenu__navItem">
+                        <a href="#beforeAfter" target="_self" class="mainMenu__navLink "> Değişim
+                            <span>Değişim</span>
+                        </a>
+                    </li>
+                    <li class="mainMenu__navItem">
+                        <a href="#contact" target="_self" class="mainMenu__navLink "> İletişim
+                            <span>İletişim</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mainMenu__contentSocials"><h4 class="mainMenu__socialsTitle">Bize Ulaşın:</h4>
+                <ul class="mainMenu__socials">
+                    <li class="mainMenu__socialsItem">
+                        <a class="mainMenu__socialsLink" href="https://www.facebook.com/drowartstudio/" target="_blank" rel="noopener noreferrer">
+                            <span class="mainMenu__socialsLink--text">facebook</span>
+                            <span class="mainMenu__socialsLink--icon icon-facebook"></span>
+                        </a>
+                    </li>
+                    <li class="mainMenu__socialsItem">
+                        <a class="mainMenu__socialsLink" href="https://www.instagram.com/drowartteam/" target="_blank" rel="noopener noreferrer">
+                            <span class="mainMenu__socialsLink--text">instagram</span>
+                            <span class="mainMenu__socialsLink--icon icon-instagram"></span>
+                        </a>
+                    </li>
+                    <li class="mainMenu__socialsItem">
+                        <a class="mainMenu__socialsLink" href="https://www.behance.net/info70baaa5b" target="_blank" rel="noopener noreferrer">
+                            <span class="mainMenu__socialsLink--text">behance</span>
+                            <span class="mainMenu__socialsLink--icon icon-behance"></span>
+                        </a>
+                    </li>
+                    <li class="mainMenu__socialsItem">
+                        <a class="mainMenu__socialsLink" href="https://www.linkedin.com/company/drowart/" target="_blank" rel="noopener noreferrer">
+                            <span class="mainMenu__socialsLink--text">linkedin</span>
+                            <span class="mainMenu__socialsLink--icon icon-linkedin"></span>
+                        </a>
+                    </li>
+                    <li class="mainMenu__socialsItem">
+                        <a class="mainMenu__socialsLink" href="https://twitter.com/DrowartTeam" target="_blank" rel="noopener noreferrer">
+                            <span class="mainMenu__socialsLink--text">twitter</span>
+                            <span class="mainMenu__socialsLink--icon icon-twitter"></span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -257,6 +363,17 @@
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    $('#fullMenu').click(function () {
+        $('.full-menu').addClass('active');
+    })
+    $('#closeFull').click(function () {
+        $('.full-menu').removeClass('active');
+    })
+    $('.mainMenu__navLink').click(function () {
+        $('.full-menu').removeClass('active');
+    })
+</script>
 <script>
     function bernardactive() {
         $('.secondDiv').addClass('active');
@@ -335,9 +452,6 @@
     }
 </script>
 <script>
-    AOS.init();
-</script>
-<script>
     if ($(window).width() > 900) {
         $(window).scroll(function () {
             if ($(window).scrollTop() == 0) {
@@ -408,5 +522,27 @@
     new BeforeAfter({
         id: '#two'
     });
+</script>
+<script>
+    $(document).ready(function () {
+
+        var counter = 0;
+        var c = 0;
+        var i = setInterval(function () {
+            $(".loading-page .counter h1").html(c + "%");
+            $(".loading-page .counter hr").css("width", c + "%");
+            counter++;
+            c++;
+            if (counter == 101) {
+                clearInterval(i);
+                $('.loading-page').fadeOut();
+                $('.wrap').show();
+            }
+        }, 10);
+
+    });
+</script>
+<script>
+    AOS.init();
 </script>
 </html>
