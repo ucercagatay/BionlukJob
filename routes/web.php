@@ -19,9 +19,7 @@ use App\Http\Controllers\back\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('front.welcome');
-});
+Route::get('/', [PageController::class,'mainpage'])->name('mainpage');
 //Front Routes
 Route::controller(PageController::class)->group(function () {
     Route::prefix('/page')->group(function () {

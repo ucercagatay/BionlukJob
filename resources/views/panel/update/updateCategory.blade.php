@@ -30,6 +30,10 @@
                                 <input type="text" name="slug"value="{{$category->slug}}" required>
                             </div>
                             <div>
+                                <label for="">Kutu Yazı Değeri</label>
+                                <input type="text" name="box_text" required>
+                            </div>
+                            <div>
                                 <label for="">Ansayfadaki Kategori Resmi</label>
                                 <input type="file" class="form-control" name="mainpage_photo" >
                             </div>

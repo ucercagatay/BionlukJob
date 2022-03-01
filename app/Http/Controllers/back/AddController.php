@@ -19,6 +19,7 @@ class AddController extends Controller
         $category = new Categorie();
         $category->name = $request->name;
         $category->slug = $request->slug;
+        $category->box_text = $request->box_text;
         $category->created_at =now();
             if ($request->hasFile('mainpage_photo')){
                 $imageName=$request->name .'.'.$request->mainpage_photo->getClientOriginalExtension();

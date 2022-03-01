@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('mainpage_photo');
+            $table->string('box_text');
             $table->boolean('status')->withComment('0 ise aktif 1 ise pasif');
             $table->timestamps();
         });

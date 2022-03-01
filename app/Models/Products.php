@@ -11,4 +11,7 @@ class Products extends Model
     public function getCategory(){
         return $this->hasOne('App\Models\Categorie','id','category_id');
     }
+    public function getImages(){
+        return $this->hasMany('App\Models\ProductsImage','product_id','id');
+    }
 }

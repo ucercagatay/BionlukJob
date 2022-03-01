@@ -19,6 +19,7 @@ class UpgradeController extends Controller
         $category=Categorie::find($id);
         $category->name = $request->name;
         $category->slug = $request->slug;
+        $category->box_text=$request->box_text;
         if ($request->hasFile('mainpage_photo')){
             $imageName=$request->name .'.'.$request->mainpage_photo->getClientOriginalExtension();
             $request->mainpage_photo->move(public_path('uploads'),$imageName);

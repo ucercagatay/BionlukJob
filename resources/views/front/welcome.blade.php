@@ -111,36 +111,18 @@
         </div>
     </div>
     <div class="projects">
-        <a href="">
-            <div class="project">
-                <img src="{{asset('front/img/assembly.jpg')}}" alt="">
-                <div class="project-text">
-                    <h3>Interior Visualization</h3>
-                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
-                    <div> <i class="fad fa-long-arrow-alt-right"></i> More information</div>
+      @foreach($categories as $category)
+            <a href="">
+                <div class="project">
+                    <img src="{{asset($category->mainpage_photo)}}" alt="">
+                    <div class="project-text">
+                        <h3>{{$category->name}}</h3>
+                        <p>{{$category->box_text}}</p>
+                        <div> <i class="fad fa-long-arrow-alt-right"></i> More information</div>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="">
-            <div class="project">
-                <img src="{{asset('front/img/blog1.jpg')}}" alt="">
-                <div class="project-text">
-                    <h3>Interior Visualization</h3>
-                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
-                    <div> <i class="fad fa-long-arrow-alt-right"></i> More information</div>
-                </div>
-            </div>
-        </a>
-        <a href="">
-            <div class="project">
-                <img src="{{asset('front/img/count.jpg')}}" alt="">
-                <div class="project-text">
-                    <h3>Interior Visualization</h3>
-                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
-                    <div> <i class="fad fa-long-arrow-alt-right"></i> More information</div>
-                </div>
-            </div>
-        </a>
+            </a>
+       @endforeach
     </div>
     <div class="contact">
         <div class="contact-social">
