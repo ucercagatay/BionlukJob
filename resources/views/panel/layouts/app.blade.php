@@ -390,13 +390,14 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="collapse" href="" aria-expanded="false"
+                    <a class="nav-link" data-bs-toggle="collapse" href="{{route('admin.show.pasifCategories')}}" aria-expanded="false"
                        aria-controls="sidebar-menu-three">
                         <i class="fas fa-empty-set menu-icon"></i>
-                        <span class="menu-title">Pasif Projeler</span>
+                        <span class="menu-title">Pasif Kategoriler</span>
                         <i class="menu-arrow"></i>
                     </a>
                 </li>
+
                 <li class="nav-item">
                     <a class="btn" style="margin: auto;display: block; width: max-content" href="">Ürün Ekle</a>
                 </li>

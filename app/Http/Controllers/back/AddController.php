@@ -25,6 +25,7 @@ class AddController extends Controller
                 $request->mainpage_photo->move(public_path('uploads'),$imageName);
                 $category->mainpage_photo = 'uploads/'.$imageName;
             }
+            $category->status = 0;
             $category->save();
             return to_route('admin.show.category');
                 }
@@ -39,6 +40,7 @@ class AddController extends Controller
             $products->title = $request->title;
             $products->description = $request->description;
             $products->slug=$request->slug;
+            $products->status=0;
             $products->created_at =now();
             $products->save();
             return to_route('admin.show.product');

@@ -47,9 +47,9 @@ Route::prefix('/admin')->name('admin.')->middleware(['isLogin'])->group(function
         });
     });
 //Delete Routes
-    Route::controller(DeleteController::class)->group(function () {
+    Route::controller(DeleteController::class)->name('switch.')->group(function () {
         Route::prefix('/delete')->group(function () {
-
+        Route::get('/category/{id}','switchCategory')->name('category');
         });
     });
 //Upgrade Routes
@@ -68,6 +68,7 @@ Route::prefix('/admin')->name('admin.')->middleware(['isLogin'])->group(function
         Route::prefix('/show')->name('show.')->group(function () {
         Route::get('/categories','showCategories')->name('category');
         Route::get('/products','showProducts')->name('product');
+        Route::get('/pasifCategories','pasifCategories')->name('pasifCategories');
 
 
         });

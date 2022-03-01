@@ -15,11 +15,15 @@ class ShowController extends Controller
         return view('panel/home');
     }
     public function showCategories(){
-        $categories=Categorie::all();
+        $categories=Categorie::where('status',0)->get();
         return view('panel/show/categories',compact('categories'));
     }
         public function showProducts(){
         $products=Products::all();
         return view('panel/show/showProducts',compact('products'));
+        }
+        public function pasifCategories(){
+            $categories=Categorie::where('status',1)->get();
+            return view('panel/show/pasifCategories',compact('categories'));
         }
 }

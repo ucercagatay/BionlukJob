@@ -26,7 +26,7 @@
             <div>
                 <label for="" >Proje Türü</label>
                 <select  name="product_id" required>
-                    <option disabled selected>Kategori Türünü seçiniz</option>
+                    <option disabled selected>Eklenecek projeyi seçiniz</option>
                     @foreach($products as $product)
                         <option value="{{$product->id}}">{{$product->title}}</option>
                     @endforeach
