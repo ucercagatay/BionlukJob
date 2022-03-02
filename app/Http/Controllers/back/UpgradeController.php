@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\back;
 
 use App\Http\Controllers\Controller;
+use App\Models\beforeAfter;
 use App\Models\Categorie;
 use App\Models\Products;
+use App\Models\SiteConfig;
+use App\Models\Slider;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
@@ -42,5 +45,62 @@ class UpgradeController extends Controller
         $products->created_at =now();
         $products->save();
         return to_route('admin.show.product');
+    }
+
+    public function getSiteConfigs(){
+        $site_configs=SiteConfig::where('id',1)->first();
+        return view('panel.update.updateSiteConfigs',compact('site_configs'));
+    }
+    public function postSiteConfigs(Request $request){
+        $site_config=SiteConfig::where('id',1)->first();
+        $site_config->phoneNumber=$request->phoneNumber;
+        $site_config->email=$request->email;
+        $site_config->adress=$request->adress;
+        $site_config->behance_url=$request->behance_url;
+        $site_config->twitter_url=$request->twitter_url;
+        $site_config->facebook_url=$request->facebook_url;
+        $site_config->save();
+        return to_route('admin.panel');
+    }
+    public function getBeforeAfter(){
+        return view('panel.update.updateBeforeAfter');
+    }
+    public function postBeforeAfter(Request $request){
+        $column=beforeAfter::where('id',1)->first();
+        if ($request->hasFile('photo_1')){
+            $imageName='slider1' .'.'.$request->photo_1->getClientOriginalExtension();
+            $request->photo_1->move(public_path('uploads'),$imageName);
+            $column->photo_1 = 'uploads/'.$imageName;
+        }
+        if ($request->hasFile('photo_2')){
+            $imageName='slider2' .'.'.$request->photo_2->getClientOriginalExtension();
+            $request->photo_2->move(public_path('uploads'),$imageName);
+            $column->photo_2 = 'uploads/'.$imageName;
+        }
+        $column->save();
+        return to_route('admin.panel');
+    }
+    public function getSlider(){
+        return view('panel.update.updateSlider');
+    }
+    public function postSlider(Request $request){
+        $slider=Slider::where('id',1)->first();
+        if ($request->hasFile('photo_1')){
+            $imageName='slidermain1' .'.'.$request->photo_1->getClientOriginalExtension();
+            $request->photo_1->move(public_path('uploads'),$imageName);
+            $slider->photo_1 = 'uploads/'.$imageName;
+        }
+        if ($request->hasFile('photo_2')){
+            $imageName='slidermain2' .'.'.$request->photo_2->getClientOriginalExtension();
+            $request->photo_2->move(public_path('uploads'),$imageName);
+            $slider->photo_2 = 'uploads/'.$imageName;
+        }
+        if ($request->hasFile('photo_3')){
+            $imageName='slidermain3' .'.'.$request->photo_3->getClientOriginalExtension();
+            $request->photo_3->move(public_path('uploads'),$imageName);
+            $slider->photo_3 = 'uploads/'.$imageName;
+        }
+        $slider->save();
+        return to_route('admin.panel');
     }
 }

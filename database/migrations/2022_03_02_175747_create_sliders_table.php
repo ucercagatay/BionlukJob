@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('site_configs', function (Blueprint $table) {
+        Schema::create('sliders', function (Blueprint $table) {
             $table->id();
-            $table->string('email');
-            $table->string('adress');
-            $table->string('facebook_url');
-            $table->string('twitter_url');
-            $table->string('behance_url');
-            $table->string('phoneNumber');
+            $table->string('photo_1');
+            $table->string('photo_2');
+            $table->string('photo_3');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('site_configs');
+        Schema::dropIfExists('sliders');
     }
 };

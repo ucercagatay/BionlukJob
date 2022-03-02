@@ -58,6 +58,13 @@ Route::prefix('/admin')->name('admin.')->middleware(['isLogin'])->group(function
             Route::post('/postCategory/{id}','postCategory')->name('postCategory');
             Route::get('/project/{id}','getProject')->name('product');
             Route::post('/postProduct/{id}','postProduct')->name('postProduct');
+            Route::get('/siteConfigs','getSiteConfigs')->name('siteConfig');
+            Route::post('/postSiteConfig','postSiteConfigs')->name('postSiteConfig');
+            Route::get('/beforeAfter','getBeforeAfter')->name('beforeAfter');
+            Route::post('postBeforeAfter','postBeforeAfter')->name('postBeforeAfter');
+            Route::get('/slider','getSlider')->name('slider');
+            Route::post('/postSlider','postSlider')->name('postSlider');
+
 
         });
     });

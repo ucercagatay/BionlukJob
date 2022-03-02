@@ -390,6 +390,29 @@
                     </div>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-menu-six" aria-expanded="false"
+                       aria-controls="sidebar-menu-three">
+                        <i class="fas fa-edit"></i>
+                        <span class="menu-title">Site Ayarları</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="sidebar-menu-six">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="{{route('admin.update.siteConfig')}}">Site Ayarları Güncelle</a></li>
+                        </ul>
+                    </div>
+                    <div class="collapse" id="sidebar-menu-six">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="{{route('admin.update.beforeAfter')}}">Before After Görsel</a></li>
+                        </ul>
+                    </div>
+                    <div class="collapse" id="sidebar-menu-six">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="{{route('admin.update.slider')}}">Slider Görsel</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="{{route('admin.show.pasifCategories')}}" aria-expanded="false"
                        aria-controls="sidebar-menu-three">
                         <i class="fas fa-empty-set menu-icon"></i>

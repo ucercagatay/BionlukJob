@@ -51,14 +51,21 @@
     <div class="slider">
         <div class="slide-inner">
             <div class="slide active">
-                <img src="{{asset('front/img/main.jpg')}}" alt="">
+                <img src="{{asset($slider->photo_1)}}" alt="">
                 <div class="slide-text animate__animated ">
                     <p>#3D IMAGE #ARCHITECTURAL VISUALIZATION #PHOTOREALISM</p>
                     <h2>We are always open to new challenges</h2>
                 </div>
             </div>
             <div class="slide">
-                <img src="{{asset('front/img/assembly.jpg')}}" alt="">
+                <img src="{{asset($slider->photo_2)}}" alt="">
+                <div class="slide-text animate__animated ">
+                    <p>#3D IMAGE #ARCHITECTURAL VISUALIZATION #PHOTOREALISM</p>
+                    <h2>We are always open to new challenges</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="{{asset($slider->photo_3)}}" alt="">
                 <div class="slide-text animate__animated ">
                     <p>#3D IMAGE #ARCHITECTURAL VISUALIZATION #PHOTOREALISM</p>
                     <h2>We are always open to new challenges</h2>
@@ -100,36 +107,18 @@
         </div>
     </div>
     <div class="projects" id="projects">
+        @foreach($categories as $category)
         <a href="" data-aos="fade-up">
             <div class="project">
-                <img src="{{asset('front/img/assembly.jpg')}}" alt="">
+                <img src="{{asset($category->mainpage_photo)}}" alt="">
                 <div class="project-text">
-                    <h3>Interior Visualization</h3>
-                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
+                    <h3>{{$category->name}}</h3>
+                    <p>{{$category->box_text}}</p>
                     <div><i class="fad fa-long-arrow-alt-right"></i> More information</div>
                 </div>
             </div>
         </a>
-        <a href="" data-aos="fade-up">
-            <div class="project">
-                <img src="{{asset('front/img/blog1.jpg')}}" alt="">
-                <div class="project-text">
-                    <h3>Interior Visualization</h3>
-                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
-                    <div><i class="fad fa-long-arrow-alt-right"></i> More information</div>
-                </div>
-            </div>
-        </a>
-        <a href="" data-aos="fade-up">
-            <div class="project">
-                <img src="{{asset('front/img/count.jpg')}}" alt="">
-                <div class="project-text">
-                    <h3>Interior Visualization</h3>
-                    <p>Your need of a photo realistic interior image will be met in the blink of an eye</p>
-                    <div><i class="fad fa-long-arrow-alt-right"></i> More information</div>
-                </div>
-            </div>
-        </a>
+       @endforeach
     </div>
     <div class="titleDesc" id="titleDesc">
         <div class="titleDesc__inner">
@@ -176,14 +165,14 @@
         <h2 class="sliderTwoPhotos__title">exterior</h2>
         <div id="two" class="bal-container">
             <div class="bal-after">
-                <img src="{{asset('front/img/main3.png')}}">
+                <img src="{{asset($before_column->photo_1)}}">
                 <div class="bal-afterPosition afterLabel">
                     After
                 </div>
             </div>
             <div class="bal-before">
                 <div class="bal-before-inset">
-                    <img src="{{asset('front/img/main.jpg')}}">
+                    <img src="{{asset($before_column->photo_2)}}">
                     <div class="bal-beforePosition beforeLabel">
                         Before
                     </div>
@@ -256,28 +245,21 @@
                     <img class="footer__topLogo" src="{{asset('image/logoText.png')}}" alt="">
 
                     <ul class="footer__topScope">
+                        @foreach($categories as $category)
                         <li class="footer__topScopeItem">
-                            <a class="footer__topScopeLink" href="https://drowart.com/services#interior" target="_self">Interior
-                                visualization </a>
+                            <a class="footer__topScopeLink" href="" target="_self">{{$category->name}}</a>
                         </li>
-                        <li class="footer__topScopeItem">
-                            <a class="footer__topScopeLink" href="https://drowart.com/services#exterior" target="_self">Exterior
-                                visualization </a>
-                        </li>
-                        <li class="footer__topScopeItem">
-                            <a class="footer__topScopeLink" href="https://drowart.com/services#animation"
-                               target="_self"> 3D animation </a>
-                        </li>
+                            @endforeach
                     </ul>
                 </div>
                 <div class="footer__topRight">
                     <p class="footer__topRightTitle">Contact us</p>
-                    <a href="mailto:info@drowart.com" class="footer__topRightLink footer__topRightLink--email">info@drowart.com</a>
+                    <a href="mailto:{{$site_config->email}}" class="footer__topRightLink footer__topRightLink--email">{{$site_config->email}}</a>
                     <a href="skype:live:.cid.cf298a4729b5592a?call" class="footer__topRightSkype">
                         <span class="footer__topRightSkypeIcon icon-skype"></span>
                     </a>
-                    <a href="tel:+48720880075" style="color: white; font-size: 20px; margin-top: -5px"
-                       class="footer__topRightLink">(+48) 720 880 075</a>
+                    <a href="tel:{{$site_config->phoneNumber}}" style="color: white; font-size: 20px; margin-top: -5px"
+                       class="footer__topRightLink">{{$site_config->phoneNumber}}</a>
                 </div>
             </div>
         </div>
