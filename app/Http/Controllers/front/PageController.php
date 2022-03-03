@@ -5,6 +5,7 @@ namespace App\Http\Controllers\front;
 use App\Http\Controllers\Controller;
 use App\Models\beforeAfter;
 use App\Models\Categorie;
+use App\Models\Feedback;
 use App\Models\Products;
 use App\Models\SiteConfig;
 use App\Models\Slider;
@@ -23,5 +24,15 @@ class PageController extends Controller
         $projects=Products::where('category_id',$request->category_id)->get();
         $site_config=SiteConfig::where('id',1)->first();
         return view('front/project',compact('projects','site_config'));
+    }
+
+    public function feedback(Request $request){
+            $message= new Feedback();
+            $message->name = $request->name;
+            $message->email = $request->email;
+            $message->phoneNumber = $request->phoneNumber;
+            $message->description = $request->description;
+            $message->save();
+            return to_route('mainpage');
     }
 }

@@ -215,23 +215,26 @@
         </div>
         <div class="contact-form">
             <h4>Bizimle İletişime Geçin</h4>
-            <div>
-                <input name="email" id="email" class="check-mail" type="text">
-                <label for="email">Ad-Soyad</label>
-            </div>
-            <div>
-                <input name="email" id="email" class="check-mail" type="email">
-                <label for="email">E-Posta</label>
-            </div>
-            <div>
-                <input name="email" id="email" class="check-mail" type="tel">
-                <label for="email">Telefon Numarası</label>
-            </div>
-            <div>
-                <input name="email" id="email" class="check-mail" type="text">
-                <label for="email">Mesaj</label>
-            </div>
-            <button type="submit" class="button"><span class="button__text">SEND MESSAGE</span></button>
+         <form method="post" action="{{route('feedback')}}">
+             @csrf
+             <div>
+                 <input name="name" id="email" class="check-mail" type="text">
+                 <label for="email">Ad-Soyad</label>
+             </div>
+             <div>
+                 <input name="email" id="email" class="check-mail" type="email">
+                 <label for="email">E-Posta</label>
+             </div>
+             <div>
+                 <input name="phoneNumber" id="email" class="check-mail" type="tel">
+                 <label for="email">Telefon Numarası</label>
+             </div>
+             <div>
+                 <input name="description" id="email" class="check-mail" type="text">
+                 <label for="email">Mesaj</label>
+             </div>
+             <button type="submit" class="button"><span class="button__text">SEND MESSAGE</span></button>
+         </form>
         </div>
     </div>
 {{--    <div class="contact-links">--}}

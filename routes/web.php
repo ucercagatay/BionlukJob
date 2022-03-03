@@ -20,6 +20,7 @@ use App\Http\Controllers\back\UserController;
 */
 
 Route::get('/', [PageController::class,'mainpage'])->name('mainpage');
+Route::post('/feedback',[PageController::class,'feedback'])->name('feedback');
 
 //Front Routes
 Route::controller(PageController::class)->group(function () {

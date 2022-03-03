@@ -16,22 +16,20 @@
                             <th>Adı Soyadı</th>
                             <th>Email Adresi</th>
                             <th>Telefon Numarası</th>
-                            <th>Stok Durumu</th>
                             <th>MESAJ</th>
-                            <th>Güncelle</th>
                             <th>Sil</th>
                         </tr>
                         </thead>
                         <tbody>
+                        @foreach($messages as $message)
                         <tr>
-                            <td><p></p></td>
-                            <td><p></p></td>
-                            <td>    </td>
-                            <td></td>
-                            <td><img src="" alt=""></td>
-                            <td><a href="" class="btn btn-info">Güncelle</a></td>
+                            <td><p>{{$message->name}}</p></td>
+                            <td><p>{{$message->email}}</p></td>
+                            <td> {{$message->phoneNumber}} </td>
+                            <td><p>{{$message->description}}</p></td>
                             <td><a href="" class="btn btn-danger">Sil</a></td>
                         </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
