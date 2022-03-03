@@ -109,11 +109,11 @@
 
         </div>
         <div class="secondDiv">
-            <h3 class=" animate__animated animate__pulse"> Without art, the crudeness of reality would make the world
-                unbearable.</h3>
+            <h3 class=" animate__animated animate__pulse"> <span>Wi</span><span>th</span><span>out</span> <span>art</span><span>, the</span> <span>cr</span><span>ud</span><span>en</span><span>ess</span><span> of</span><span> re</span><span>al</span><span>ity</span><span> wo</span><span>uld</span><span> ma</span><span>ke</span><span> the</span><span> wor</span><span>ld</span>
+                <span>un</span><span>be</span><span>ar</span><span>ab</span><span>le.</span></h3>
 
-            <h3 class=" animate__animated animate__pulse">Sanat olmasaydı, gerçeğin çiğliği dünyayı dayanılmaz hale
-                getirirdi.</h3>
+            <h3 class=" animate__animated animate__pulse"><span>Sa</span><span>nat</span> <span>olm</span><span>as</span><span>ay</span><span>dı,</span> <span>ge</span><span>rç</span><span>eğ</span><span>in</span> <span>çiğ</span><span>li</span><span>ği </span><span>dün</span><span>ya</span><span>yı </span><span>da</span><span>ya</span><span>nı</span><span>lm</span><span>az</span> <span>ha</span><span>le</span>
+                <span>get</span><span>ir</span><span>ir</span><span>di.</span></h3>
         </div>
         <div class="bernardShawPhoto">
             <img src="{{asset('front/img/bernard.jfif')}}" alt="">
