@@ -39,7 +39,7 @@ header{
     top: 0;
     width: 100%;
     left: 0;
-    z-index: 9999999999;
+    z-index: 999999999;
     transition: 500ms all;
 }
 header.sticky{
@@ -1623,26 +1623,28 @@ header .container{
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
     z-index: 999999999999;
     position: fixed;
 }
 .loading-page .counter {
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .loading-page .counter h1 {
     color: #080808;
     font-size: 20px;
-    margin-top: -10px;
+    margin-top: -52vh;
+    margin-right: 70px;
 }
 .loading-page .counter hr {
     background: #080808;
     border: none;
     height: 1px;
-}
-.loading-page .counter {
-    position: relative;
-    width: 200px;
+    transform: rotate(270deg);
 }
 .loading-page .counter h1.abs {
     position: fixed;

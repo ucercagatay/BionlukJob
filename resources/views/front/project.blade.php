@@ -344,17 +344,22 @@
 
         var counter = 0;
         var c = 0;
+        var b=0;
         var i = setInterval(function () {
-            $(".loading-page .counter h1").html(c + "%");
-            $(".loading-page .counter hr").css("width", c + "%");
+            $(".loading-page .counter h1").html(b + "%");
+            $(".loading-page .counter h1").css('margin-bottom' , b/1.2+ "vh");
+            $(".loading-page .counter hr").css("width", c + "vh");
+            if(c%2 === 0){
+                b++
+            }
             counter++;
             c++;
-            if (counter == 101) {
+            if (counter == 201) {
                 clearInterval(i);
                 $('.loading-page').fadeOut();
                 $('.wrap').show();
             }
-        }, 10);
+        }, 15);
 
     });
 </script>
