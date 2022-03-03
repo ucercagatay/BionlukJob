@@ -100,6 +100,16 @@ class UpgradeController extends Controller
             $request->photo_3->move(public_path('uploads'),$imageName);
             $slider->photo_3 = 'uploads/'.$imageName;
         }
+        if ($request->hasFile('photo_4')){
+            $imageName='slidermain4' .'.'.$request->photo_4->getClientOriginalExtension();
+            $request->photo_4->move(public_path('uploads'),$imageName);
+            $slider->photo_4 = 'uploads/'.$imageName;
+        }
+        if ($request->hasFile('photo_5')){
+            $imageName='slidermain5' .'.'.$request->photo_5->getClientOriginalExtension();
+            $request->photo_5->move(public_path('uploads'),$imageName);
+            $slider->photo_5 = 'uploads/'.$imageName;
+        }
         $slider->save();
         return to_route('admin.panel');
     }

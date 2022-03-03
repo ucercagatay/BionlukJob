@@ -71,10 +71,24 @@
                     <h2>We are always open to new challenges</h2>
                 </div>
             </div>
+            <div class="slide">
+                <img src="{{asset($slider->photo_4)}}" alt="">
+                <div class="slide-text animate__animated ">
+                    <p>#3D IMAGE #ARCHITECTURAL VISUALIZATION #PHOTOREALISM</p>
+                    <h2>We are always open to new challenges</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="{{asset($slider->photo_5)}}" alt="">
+                <div class="slide-text animate__animated ">
+                    <p>#3D IMAGE #ARCHITECTURAL VISUALIZATION #PHOTOREALISM</p>
+                    <h2>We are always open to new challenges</h2>
+                </div>
+            </div>
         </div>
         <div class="slider-foot">
-            <h4>Luxury Apartment</h4>
-            <p>INTERIOR RENDERING</p>
+            <h4>{{$slider->slider_title}}</h4>
+            <p>{{$slider->slider_text}}</p>
             <span class="headerHome__bottomLine"></span>
         </div>
         <div class="slider-buttons">
@@ -113,7 +127,7 @@
                 <img src="{{asset($category->mainpage_photo)}}" alt="">
                 <div class="project-text">
                     <h3>{{$category->name}}</h3>
-                    <p>{{$category->box_text}}</p>
+                    <p>{!! $category->box_text  !!}</p>
                     <div><i class="fad fa-long-arrow-alt-right"></i> More information</div>
                 </div>
             </div>

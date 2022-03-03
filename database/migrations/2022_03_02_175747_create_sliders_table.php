@@ -18,6 +18,11 @@ return new class extends Migration
             $table->string('photo_1');
             $table->string('photo_2');
             $table->string('photo_3');
+            $table->string('photo_4');
+            $table->string('photo_5');
+            $table->string('slider_title');
+            $table->string('slider_text');
+
             $table->timestamps();
         });
     }

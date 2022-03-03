@@ -22,10 +22,16 @@
                         <form action="{{route('admin.update.postSlider')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div>
+                                <label>Before After title ve Yazı</label>
+                                <input type="text" name="slider_title">
+                                <input type="text" name="slider_text">
                                 <label for="">Before After Resmi</label>
+
                                 <input type="file" class="form-control" name="photo_1" >
                                 <input type="file" class="form-control" name="photo_2" >
                                 <input type="file" class="form-control" name="photo_3" >
+                                <input type="file" class="form-control" name="photo_4" >
+                                <input type="file" class="form-control" name="photo_5" >
                             </div>
                             <button type="submit" class="btn btn-success float-left">Ekle</button>
                         </form>

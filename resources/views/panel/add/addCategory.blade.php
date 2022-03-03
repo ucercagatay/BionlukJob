@@ -31,7 +31,7 @@
                             </div>
                             <div>
                                 <label for="">Kutu Değeri</label>
-                                <input type="text" name="box_text" required>
+                                <textarea id="summary-ckeditor" cols="200" rows="200" name="box_text" required></textarea>
                             </div>
                             <div>
                                 <label for="">Ansayfadaki Kategori Resmi</label>
@@ -51,5 +51,9 @@
         setTimeout(()=>{
             $("#form-elements").addClass("show")
         },1000)
+    </script>
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <script>
+        CKEDITOR.replace('summary-ckeditor');
     </script>
 @endsection
