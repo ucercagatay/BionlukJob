@@ -8,7 +8,7 @@
 
                 <div class="card p-5">
                     <div class="page-header">
-                        <h2 class="pageheader-title">Kategori Listesi</h2>
+                        <h2 class="pageheader-title">Pasif Kategori Listesi</h2>
                     </div>
                     <table class="display nowrap dataTable cell-border" style="width:100%">
                         <thead>

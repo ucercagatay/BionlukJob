@@ -91,6 +91,7 @@ header .header .head-buttons a:first-child{
     color: white;
     transition: 200ms all;
     cursor: pointer;
+    text-shadow: 0 0 4px #000000b0;
 }
 header .header .head-buttons a:first-child:hover{
     color: #31AFF2;
@@ -111,6 +112,7 @@ header .header .head-buttons a:last-child span{
     display: block;
     background-color: white;
     transition: width .3s,background-color .3s;
+    box-shadow: 0 0 12px black;
 }
 header .header .head-buttons a:last-child span:nth-child(1){
     width: 100%;
@@ -144,7 +146,7 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     height: 100vh;
     overflow: hidden;
 }
-.slider>a{
+.slider>.bulb{
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -158,10 +160,10 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     justify-content: center;
     cursor: pointer;
 }
-.slider>a.active{
+.slider>.bulb.active{
     background-color: #31AFF2;
 }
-.slider>a:hover{
+.slider>.bulb:hover{
     background-color: #31AFF2;
 }
 .slider .slide{
@@ -476,7 +478,6 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
 }
 .bernardShaw{
     width: 100%;
-    height: 65vh;
     padding: 100px 150px;
     background-color: white;
     display: flex;
@@ -1123,6 +1124,7 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     height: 100%;
     z-index: 15;
     overflow: hidden;
+    border-right: 1px solid #ffffff75;
 }
 
 .bal-before-inset {
@@ -1203,13 +1205,13 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -43px;
-    margin-top: -70px;
+    margin-left: -25px;
+    margin-top: -30px;
     z-index: 20;
     pointer-events: none;
 }
 .bal-handle img{
-    height: 120px;
+    height: 45px;
 }
 .handle-left-arrow,
 .handle-right-arrow {
@@ -1397,7 +1399,6 @@ header .header .head-buttons a:last-child:hover span:nth-child(2){
 
 .contact-form div {
     display: flex;
-    padding: 100px 0 ;
     margin-bottom: 4vh;
 }
 .contact-form h4{

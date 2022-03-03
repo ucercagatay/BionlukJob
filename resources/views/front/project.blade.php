@@ -48,9 +48,13 @@
 <main>
     <div class="slider">
         <div class="slide-inner">
-            @foreach($projects as $project)
-            <div class="slide projec close active slide{{$project->id}}">
-                <img src="{{asset($project->getFirstİmage->image)}}" alt="">
+            @foreach($projects as $key=>$project)
+                @if($key)
+                    <div class="slide projec close slide{{$project->id}}">
+                @else
+                            <div class="slide projec close active slide{{$project->id}}">
+                                @endif
+                    <img src="{{asset($project->getFirstİmage->image)}}" alt="">
                 <div class="slide-text animate__animated active">
                     <h2> to new challenges</h2>
                     <a type="submit" class="button discover" id="slide{{$project->id}}"><span class="button__text">Discover More</span></a>
@@ -265,11 +269,12 @@
         id='.gallery.'+event.currentTarget.id;
         $('.slide.active .slide-text').removeClass('active')
         $('.slide.active .hoverText').addClass('active')
-        $(id).css('display','block');
+        $(id).css('display','flex');
         $('.slider-buttons').addClass('hide');
         $('body').removeClass('sticky');
         auto = false;
         clearInterval(slideInterval)
+        AOS.init();
     })
     $('.back').click(function () {
         clearGalery()

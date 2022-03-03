@@ -187,7 +187,7 @@
                 </div>
             </div>
             <div class="bal-handle bal-handle-default">
-                <img src="{{asset('image/logo.png')}}" alt="">
+                <img src="{{asset('image/H.png')}}" alt="">
             </div>
         </div>
     </div>
@@ -205,7 +205,7 @@
             </div>
             <div>
                 <img src="{{asset('image/logoText.png')}}" alt="">
-                <ul  class="contact-form">
+                <ul  class="social-icons">
                     <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href=""><i class="fab fa-twitter"></i></a></li>
                     <li><a href=""><i class="fab fa-instagram"></i></a></li>

@@ -1,5 +1,11 @@
 @extends("panel.layouts.app")
 @section("content")
+    <style>
+        table.dataTable.display tbody tr td:nth-child(4){
+            max-width: 150px;
+            overflow: hidden;
+        }
+    </style>
     <div class="pdf container">
 
 
@@ -8,7 +14,7 @@
 
                 <div class="card p-5">
                     <div class="page-header">
-                        <h2 class="pageheader-title">Kategori Listesi</h2>
+                        <h2 class="pageheader-title">Proje Listesi</h2>
                     </div>
                     <table class="display nowrap dataTable cell-border" style="width:100%">
                         <thead>

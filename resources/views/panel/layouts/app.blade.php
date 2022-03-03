@@ -273,6 +273,12 @@
                 overflow-x: auto;
             }
         }
+        .display.nowrap.dataTable.cell-border{
+            width: 100% !important;
+            overflow: auto !important;
+            display: block !important;
+        }
+
     </style>
 </head>
 <body>
