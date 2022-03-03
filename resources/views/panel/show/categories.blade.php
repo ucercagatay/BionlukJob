@@ -19,7 +19,7 @@
                             <th>Oluşturulma Tarihi</th>
                             <th>Düzenlenme Tarihi</th>
                             <th>Güncelle</th>
-                            <th>Sil</th>
+                            <th>PASİF ET</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -31,7 +31,7 @@
                                 <td><p>{{$category->created_at}}</p></td>
                                 <td>@if($category->updated_at!=Null)<p>{{$category->updated_at}}</p>@else<p>Henüz Düzenlenmedi</p>@endif</td>
                                 <td><a href="{{route('admin.update.category',$category->id)}}" class="btn btn-info">Güncelle</a></td>
-                                <td><a href="{{route('admin.switch.category',$category->id)}}" class="btn btn-danger">Sil</a></td>
+                                <td><a href="{{route('admin.switch.category',$category->id)}}" class="btn btn-danger">PASİF ET</a></td>
                             </tr>
                         @endforeach
                         </tbody>

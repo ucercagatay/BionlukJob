@@ -10,8 +10,12 @@ class DeleteController extends Controller
 {
     public function switchCategory(Request $request,$id){
         $category=Categorie::find($request->id);
-        $category->status=1;
+        if($category->status==0){        $category->status=1;
+        }
+        else{
+            $category->status = 0;
+        }
         $category->save();
-        return to_route('admin.show.category');
+        return to_route('admin.show.categories');
     }
 }

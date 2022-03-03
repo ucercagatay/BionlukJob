@@ -43,6 +43,7 @@ Route::prefix('/admin')->name('admin.')->middleware(['isLogin'])->group(function
         Route::get('/ımages','addImages')->name('images');
         Route::post('/ımagePost','postImages')->name('postImage');
         Route::get('/ımagePost','postImages')->name('postImage');
+
         });
     });
 //Delete Routes
@@ -75,6 +76,7 @@ Route::prefix('/admin')->name('admin.')->middleware(['isLogin'])->group(function
         Route::get('/categories','showCategories')->name('category');
         Route::get('/products','showProducts')->name('product');
         Route::get('/pasifCategories','pasifCategories')->name('pasifCategories');
+        Route::get('/messages','showMessages')->name('messages');
 
 
         });

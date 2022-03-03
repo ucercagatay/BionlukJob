@@ -4,6 +4,7 @@ namespace App\Http\Controllers\back;
 
 use App\Http\Controllers\Controller;
 use App\Models\Categorie;
+use App\Models\Feedback;
 use App\Models\Products;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -25,5 +26,9 @@ class ShowController extends Controller
         public function pasifCategories(){
             $categories=Categorie::where('status',1)->get();
             return view('panel/show/pasifCategories',compact('categories'));
+        }
+        public function showMessages(){
+        $messages=Feedback::all();
+        return view('panel/show/messages',compact('messages'));
         }
 }

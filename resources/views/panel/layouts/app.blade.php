@@ -326,7 +326,7 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
                 <li class="nav-item dashboard">
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="{{route('admin.panel')}}">
                         <i class="mdi mdi-home-variant menu-icon"></i>
                         <span class="menu-title">Ana Sayfa</span>
                     </a>
@@ -401,7 +401,7 @@
                     </a>
                     <div class="collapse" id="sidebar-menu-five">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"><a class="nav-link" href="">Mesaj Listesi</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('admin.show.messages')}}">Mesaj Listesi</a></li>
                         </ul>
                     </div>
                 </li>
@@ -429,7 +429,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="collapse" href="{{route('admin.show.pasifCategories')}}" aria-expanded="false"
+                    <a class="nav-link"  href="{{route('admin.show.pasifCategories')}}" aria-expanded="false"
                        aria-controls="sidebar-menu-three">
                         <i class="fas fa-empty-set menu-icon"></i>
                         <span class="menu-title">Pasif Kategoriler</span>
