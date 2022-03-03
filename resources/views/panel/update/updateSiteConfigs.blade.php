@@ -16,7 +16,7 @@
                         <h2 class="pageheader-title">Site Ayarlarını Güncelle</h2>
                     </div>
                     <div class=" clearfix">
-                        <div style="background-color: yellow">
+                        <div>
                             <li></li>
                         </div>
 

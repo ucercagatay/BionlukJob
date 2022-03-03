@@ -13,7 +13,6 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}">
-    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -52,35 +51,35 @@
         <div class="slide-inner">
             <div class="slide active">
                 <img src="{{asset($slider->photo_1)}}" alt="">
-                <div class="slide-text animate__animated ">
+                <div class="slide-text animate__animated active">
                     <p>#3D IMAGE #ARCHITECTURAL VISUALIZATION #PHOTOREALISM</p>
                     <h2>We are always open to new challenges</h2>
                 </div>
             </div>
             <div class="slide">
                 <img src="{{asset($slider->photo_2)}}" alt="">
-                <div class="slide-text animate__animated ">
+                <div class="slide-text animate__animated active">
                     <p>#3D IMAGE #ARCHITECTURAL VISUALIZATION #PHOTOREALISM</p>
                     <h2>We are always open to new challenges</h2>
                 </div>
             </div>
             <div class="slide">
                 <img src="{{asset($slider->photo_3)}}" alt="">
-                <div class="slide-text animate__animated ">
+                <div class="slide-text animate__animated active">
                     <p>#3D IMAGE #ARCHITECTURAL VISUALIZATION #PHOTOREALISM</p>
                     <h2>We are always open to new challenges</h2>
                 </div>
             </div>
             <div class="slide">
                 <img src="{{asset($slider->photo_4)}}" alt="">
-                <div class="slide-text animate__animated ">
+                <div class="slide-text animate__animated active">
                     <p>#3D IMAGE #ARCHITECTURAL VISUALIZATION #PHOTOREALISM</p>
                     <h2>We are always open to new challenges</h2>
                 </div>
             </div>
             <div class="slide">
                 <img src="{{asset($slider->photo_5)}}" alt="">
-                <div class="slide-text animate__animated ">
+                <div class="slide-text animate__animated active">
                     <p>#3D IMAGE #ARCHITECTURAL VISUALIZATION #PHOTOREALISM</p>
                     <h2>We are always open to new challenges</h2>
                 </div>
@@ -173,21 +172,21 @@
         <h2 class="sliderTwoPhotos__title">exterior</h2>
         <div id="two" class="bal-container">
             <div class="bal-after">
-                <img src="{{asset($before_column->photo_1)}}">
-                <div class="bal-afterPosition afterLabel">
+                <img src="{{asset('front/img/count.jpg')}}">
+                <div class="bal-afterPosition bal-afterPosition-default afterLabel">
                     After
                 </div>
             </div>
-            <div class="bal-before">
-                <div class="bal-before-inset">
-                    <img src="{{asset($before_column->photo_2)}}">
-                    <div class="bal-beforePosition beforeLabel">
+            <div class="bal-before bal-before-default">
+                <div class="bal-before-inset bal-before-inset-default">
+                    <img src="{{asset('front/img/main.jpg')}}">
+                    <div class="bal-beforePosition bal-beforePosition-default beforeLabel">
                         Before
                     </div>
 
                 </div>
             </div>
-            <div class="bal-handle">
+            <div class="bal-handle bal-handle-default">
                 <img src="{{asset('image/logo.png')}}" alt="">
             </div>
         </div>
@@ -206,7 +205,7 @@
             </div>
             <div>
                 <img src="{{asset('image/logoText.png')}}" alt="">
-                <ul>
+                <ul  class="contact-form">
                     <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href=""><i class="fab fa-twitter"></i></a></li>
                     <li><a href=""><i class="fab fa-instagram"></i></a></li>
@@ -235,29 +234,28 @@
             <button type="submit" class="button"><span class="button__text">SEND MESSAGE</span></button>
         </div>
     </div>
-    {{--    <div class="contact-links">--}}
-    {{--        <div>--}}
-    {{--            <a href="">About Us <i class="fad fa-long-arrow-alt-right"></i></a>--}}
-    {{--        </div>--}}
-    {{--        <div>--}}
-    {{--            <a href="">Services <i class="fad fa-long-arrow-alt-right"></i></a>--}}
-    {{--        </div>--}}
-    {{--        <div>--}}
-    {{--            <a href="">Contact Us <i class="fad fa-long-arrow-alt-right"></i></a>--}}
-    {{--        </div>--}}
-    {{--    </div>--}}
+{{--    <div class="contact-links">--}}
+{{--            <div>--}}
+{{--                <a href="">About Us <i class="fad fa-long-arrow-alt-right"></i></a>--}}
+{{--            </div>--}}
+{{--            <div>--}}
+{{--                <a href="">Services <i class="fad fa-long-arrow-alt-right"></i></a>--}}
+{{--            </div>--}}
+{{--            <div>--}}
+{{--                <a href="">Contact Us <i class="fad fa-long-arrow-alt-right"></i></a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     <div class="footer__wrapper">
         <div class="footer__content container">
             <div class="footer__top">
                 <div class="footer__topLeft">
                     <img class="footer__topLogo" src="{{asset('image/logoText.png')}}" alt="">
 
-                    <ul class="footer__topScope">
-                        @foreach($categories as $category)
-                        <li class="footer__topScopeItem">
-                            <a class="footer__topScopeLink" href="" target="_self">{{$category->name}}</a>
-                        </li>
-                            @endforeach
+                    <ul class="social-icons">
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
                     </ul>
                 </div>
                 <div class="footer__topRight">
@@ -442,6 +440,75 @@
     }
 </script>
 <script>
+    if ($(window).width() < 900) {
+        $('.bal-before').addClass('bal-before-mobile');
+        $('.bal-before-mobile').removeClass('bal-before-default');
+
+        $('.bal-beforePosition').addClass('bal-beforePosition-mobile');
+        $('.bal-beforePosition-mobile').removeClass('bal-beforePosition-default');
+
+        $('.bal-afterPosition').addClass('bal-afterPosition-mobile');
+        $('.bal-afterPosition-mobile').removeClass('bal-afterPosition-default');
+
+        $('.bal-handle').addClass('bal-handle-mobile');
+        $('.bal-handle-mobile').removeClass('bal-handle-default');
+
+        $('.bal-before-inset').addClass('bal-before-inset-mobil');
+        $('.bal-before-inset-mobil').removeClass('bal-before-inset-default');
+    }
+    else{
+        $('.bal-before-mobile').addClass('bal-before-default');
+        $('.bal-before').removeClass('bal-before-mobile');
+
+        $('.bal-beforePosition-mobile').addClass('bal-beforePosition-default');
+        $('.bal-beforePosition').removeClass('bal-beforePosition-mobile');
+
+        $('.bal-afterPosition-mobile').addClass('bal-afterPosition-default');
+        $('.bal-afterPosition').removeClass('bal-afterPosition-mobile');
+
+        $('.bal-handle-mobile').addClass('bal-handle-default');
+        $('.bal-handle').removeClass('bal-handle-mobile');
+
+        $('.bal-before-inset-mobil').addClass('bal-before-inset-default');
+        $('.bal-before-inset').removeClass('bal-before-inset-mobil');
+    }
+    $(window).resize(function (){
+        if ($(window).width() < 900) {
+            $('.bal-before').addClass('bal-before-mobile');
+            $('.bal-before-mobile').removeClass('bal-before-default');
+
+            $('.bal-beforePosition').addClass('bal-beforePosition-mobile');
+            $('.bal-beforePosition-mobile').removeClass('bal-beforePosition-default');
+
+            $('.bal-afterPosition').addClass('bal-afterPosition-mobile');
+            $('.bal-afterPosition-mobile').removeClass('bal-afterPosition-default');
+
+            $('.bal-handle').addClass('bal-handle-mobile');
+            $('.bal-handle-mobile').removeClass('bal-handle-default');
+
+            $('.bal-before-inset').addClass('bal-before-inset-mobil');
+            $('.bal-before-inset-mobil').removeClass('bal-before-inset-default');
+        }
+        else{
+            $('.bal-before-mobile').addClass('bal-before-default');
+            $('.bal-before').removeClass('bal-before-mobile');
+
+            $('.bal-beforePosition-mobile').addClass('bal-beforePosition-default');
+            $('.bal-beforePosition').removeClass('bal-beforePosition-mobile');
+
+            $('.bal-afterPosition-mobile').addClass('bal-afterPosition-default');
+            $('.bal-afterPosition').removeClass('bal-afterPosition-mobile');
+
+            $('.bal-handle-mobile').addClass('bal-handle-default');
+            $('.bal-handle').removeClass('bal-handle-mobile');
+
+            $('.bal-before-inset-mobil').addClass('bal-before-inset-default');
+            $('.bal-before-inset').removeClass('bal-before-inset-mobil');
+        }
+    })
+
+</script>
+<script>
     if ($(window).width() > 900) {
         $(window).scroll(function () {
             if ($(window).scrollTop() == 0) {
@@ -458,15 +525,15 @@
         constructor(enteryObject) {
 
             const beforeAfterContainer = document.querySelector(enteryObject.id);
-            const before = beforeAfterContainer.querySelector('.bal-before');
-            const beforeText = beforeAfterContainer.querySelector('.bal-beforePosition');
-            const afterText = beforeAfterContainer.querySelector('.bal-afterPosition');
-            const handle = beforeAfterContainer.querySelector('.bal-handle');
+            const before = beforeAfterContainer.querySelector('.bal-before-default');
+            const beforeText = beforeAfterContainer.querySelector('.bal-beforePosition-default');
+            const afterText = beforeAfterContainer.querySelector('.bal-afterPosition-default');
+            const handle = beforeAfterContainer.querySelector('.bal-handle-default');
             var widthChange = 0;
 
-            beforeAfterContainer.querySelector('.bal-before-inset').setAttribute("style", "width: " + beforeAfterContainer.offsetWidth + "px;")
+            beforeAfterContainer.querySelector('.bal-before-inset-default').setAttribute("style", "width: " + beforeAfterContainer.offsetWidth + "px;")
             window.onresize = function () {
-                beforeAfterContainer.querySelector('.bal-before-inset').setAttribute("style", "width: " + beforeAfterContainer.offsetWidth + "px;")
+                beforeAfterContainer.querySelector('.bal-before-inset-default').setAttribute("style", "width: " + beforeAfterContainer.offsetWidth + "px;")
             }
             before.setAttribute('style', "width: 50%;");
             handle.setAttribute('style', "left: 50%;");
@@ -509,9 +576,87 @@
     }
 </script>
 <script>
-    new BeforeAfter({
-        id: '#two'
-    });
+
+    class BeforeAfterMobile {
+        constructor(enteryObject) {
+
+            const beforeAfterContainer = document.querySelector(enteryObject.id);
+            const before = beforeAfterContainer.querySelector('.bal-before-mobile');
+            const beforeText = beforeAfterContainer.querySelector('.bal-beforePosition-mobile');
+            const afterText = beforeAfterContainer.querySelector('.bal-afterPosition-mobile');
+            const handle = beforeAfterContainer.querySelector('.bal-handle-mobile');
+            var widthChange = 0;
+
+            beforeAfterContainer.querySelector('.bal-before-inset-mobil').setAttribute("style", "height: " + beforeAfterContainer.offsetWidth + "px;")
+            window.onresize = function () {
+                beforeAfterContainer.querySelector('.bal-before-inset-mobil').setAttribute("style", "height: " + beforeAfterContainer.offsetWidth + "px;")
+            }
+            before.setAttribute('style', "height: 50%;");
+            handle.setAttribute('style', "top: 50%;");
+
+            //touch screen event listener
+            beforeAfterContainer.addEventListener("touchstart", (e) => {
+
+                beforeAfterContainer.addEventListener("touchmove", (e2) => {
+                    let containerWidth = beforeAfterContainer.offsetHeight;
+                    let currentPoint = e2.changedTouches[0].clientY;
+
+                    let startOfDiv = beforeAfterContainer.offsetTop;
+
+                    let modifiedCurrentPoint = currentPoint - startOfDiv;
+
+                    if (modifiedCurrentPoint > 10 && modifiedCurrentPoint < beforeAfterContainer.offsetHeight - 10) {
+                        let newWidth = modifiedCurrentPoint * 100 / containerWidth;
+
+                        before.setAttribute('style', "height:" + newWidth + "%;");
+                        afterText.setAttribute('style', "z-index: 1;");
+                        handle.setAttribute('style', "top:" + newWidth + "%;");
+                    }
+                });
+            });
+
+            //mouse move event listener
+            beforeAfterContainer.addEventListener('mousemove', (e) => {
+                let containerWidth = beforeAfterContainer.offsetHeight;
+                widthChange = e.offsetY;
+                let newWidth = widthChange * 100 / containerWidth;
+
+                if (e.offsetY > 10 && e.offsetY < beforeAfterContainer.offsetHeight - 10) {
+                    before.setAttribute('style', "height:" + newWidth + "%;");
+                    afterText.setAttribute('style', "z-index:" + "1;");
+                    handle.setAttribute('style', "top:" + newWidth + "%;");
+                }
+            })
+
+        }
+    }
+</script>
+<script>
+    if ($(window).width() < 900) {
+
+        new BeforeAfterMobile({
+            id: '#two'
+        });
+    }
+    else{
+        new BeforeAfter({
+            id: '#two'
+        });
+    }
+    $(window).resize(function (){
+        if ($(window).width() < 900) {
+
+            new BeforeAfterMobile({
+                id: '#two'
+            });
+        }
+        else{
+            new BeforeAfter({
+                id: '#two'
+            });
+        }
+    })
+
 </script>
 <script>
     $(document).ready(function () {

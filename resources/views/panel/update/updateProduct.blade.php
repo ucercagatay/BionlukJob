@@ -16,7 +16,7 @@
                         <h2 class="pageheader-title">Ürün Ekle</h2>
                     </div>
                     <div class=" clearfix">
-                        <div style="background-color: yellow">
+                        <div >
                             <li></li>
                         </div>
                         <form action="{{route('admin.update.postProduct',$product->id)}}" method="POST" enctype="multipart/form-data">

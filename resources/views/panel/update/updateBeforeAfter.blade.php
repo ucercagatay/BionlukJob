@@ -16,7 +16,7 @@
                         <h2 class="pageheader-title">Before After Ekle</h2>
                     </div>
                     <div class=" clearfix">
-                        <div style="background-color: yellow">
+                        <div>
                             <li></li>
                         </div>
                         <form action="{{route('admin.update.postBeforeAfter')}}" method="post" enctype="multipart/form-data">
@@ -26,6 +26,7 @@
                                 <input type="file" class="form-control" name="photo_1" >
                                 <input type="file" class="form-control" name="photo_2" >
                             </div>
+                            <div></div>
                             <button type="submit" class="btn btn-success float-left">Ekle</button>
                         </form>
                     </div>

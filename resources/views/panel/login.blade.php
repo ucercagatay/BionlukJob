@@ -26,7 +26,7 @@
         @csrf
         <div class="login-modal">
             <div>
-                <img src="{{asset("image/baazi1.png")}}" alt="">
+                <img src="{{asset("image/logoText.png")}}" alt="">
             </div>
             <div>
                 <input name="email" id="email" class="check-mail" type="email">

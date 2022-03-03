@@ -139,7 +139,8 @@ body{
 }
 
 .login-body .login-modal div img {
-    width: 75%;
+    width: 80%;
+    padding: 12px;
 }
 
 .login-body .login-modal a {

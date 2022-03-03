@@ -16,7 +16,7 @@
                         <h2 class="pageheader-title">Kategori Ekle</h2>
                     </div>
                     <div class=" clearfix">
-                        <div style="background-color: yellow">
+                        <div>
                             <li></li>
                         </div>
                         <form action="{{route('admin.add.postCategory')}}" method="post" enctype="multipart/form-data">

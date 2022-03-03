@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Baazi Coffee And Chocolate | Panel</title>
+    <title>HERMESARTSTUDIO | Panel</title>
     <link rel="stylesheet" href="{{asset('panel_assets/vendors/feather/feather.css')}}">
     <link rel="stylesheet" href="{{asset('panel_assets/vendors/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('panel_assets/vendors/ti-icons/css/themify-icons.css')}}">
@@ -37,10 +37,26 @@
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link href="{{asset('image/baazi.ico')}}" rel="icon">
+    <link rel="icon" href="{{asset('image/logo.ico')}}" type="image/x-icon">
     <link href="{{asset("fix.css")}}" rel="stylesheet"/>
 
     <style>
+        .clearfix form div.cke_inner,
+        .clearfix form div.cke_1{
+            width: 100%;
+        }
+        .btn-success{
+            height: max-content;
+        }
+        .input-group > .form-control,
+        .form-control:read-only,
+        .clearfix form div input{
+            width: max-content;
+            margin-bottom: 20px;
+        }
+        li{
+            list-style: none !important;
+        }
         .card{
             overflow: hidden ;
         }
@@ -269,7 +285,7 @@
             </div>
             <div>
                 <a class="navbar-brand brand-logo" href="">
-                    <img src="" alt="logo"/>
+                    <img src="{{asset('image/logoText.png')}}" alt="logo"/>
                 </a>
                 <a class="navbar-brand brand-logo-mini" href="">
                     <img src="" alt="logo"/>
@@ -318,7 +334,7 @@
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-menu-one" aria-expanded="false"
                        aria-controls="sidebar-menu-one">
-                        <i class="fad fa-pie menu-icon"></i>
+                        <i class="far fa-align-right menu-icon"></i>
                         <span class="menu-title">Kategori Ayarları</span>
                         <i class="menu-arrow"></i>
                     </a>
@@ -334,7 +350,7 @@
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-menu-two" aria-expanded="false"
                        aria-controls="sidebar-menu-two">
-                        <i class="fas fa-mug menu-icon"></i>
+                        <i class="far fa-project-diagram menu-icon"></i>
                         <span class="menu-title">Proje Ayarları</span>
                         <i class="menu-arrow"></i>
                     </a>
@@ -350,7 +366,7 @@
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-menu-three" aria-expanded="false"
                        aria-controls="sidebar-menu-three">
-                        <i class="menu-icon fas fa-egg-fried"></i>
+                        <i class="fas fa-photo-video menu-icon"></i>
                         <span class="menu-title">Galeri Ayarları</span>
                         <i class="menu-arrow"></i>
                     </a>
@@ -392,7 +408,7 @@
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-menu-six" aria-expanded="false"
                        aria-controls="sidebar-menu-three">
-                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-edit menu-icon"></i>
                         <span class="menu-title">Site Ayarları</span>
                         <i class="menu-arrow"></i>
                     </a>
@@ -419,10 +435,6 @@
                         <span class="menu-title">Pasif Kategoriler</span>
                         <i class="menu-arrow"></i>
                     </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="btn" style="margin: auto;display: block; width: max-content" href="">Ürün Ekle</a>
                 </li>
             </ul>
         </nav>

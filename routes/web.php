@@ -20,6 +20,11 @@ use App\Http\Controllers\back\UserController;
 */
 
 Route::get('/', [PageController::class,'mainpage'])->name('mainpage');
+Route::get('/project',
+    function (){
+    return view("front.project");
+    }
+);
 //Front Routes
 Route::controller(PageController::class)->group(function () {
     Route::prefix('/page')->group(function () {

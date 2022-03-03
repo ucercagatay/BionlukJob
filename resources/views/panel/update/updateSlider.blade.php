@@ -13,10 +13,10 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="card p-5">
                     <div class="page-header">
-                        <h2 class="pageheader-title">Before After Ekle</h2>
+                        <h2 class="pageheader-title">Slider/Slide Ekle</h2>
                     </div>
                     <div class=" clearfix">
-                        <div style="background-color: yellow">
+                        <div>
                             <li></li>
                         </div>
                         <form action="{{route('admin.update.postSlider')}}" method="post" enctype="multipart/form-data">
@@ -32,6 +32,9 @@
                                 <input type="file" class="form-control" name="photo_3" >
                                 <input type="file" class="form-control" name="photo_4" >
                                 <input type="file" class="form-control" name="photo_5" >
+                            </div>
+                            <div>
+
                             </div>
                             <button type="submit" class="btn btn-success float-left">Ekle</button>
                         </form>
