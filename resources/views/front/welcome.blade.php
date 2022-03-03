@@ -193,16 +193,7 @@
     </div>
     <div class="contact" id="contact">
         <div class="contact-social">
-            <div class="contact-us">
-                <h4>Contact us</h4>
-                <div>
-                    <img src="{{asset("front/img/bernard.jfif")}}" alt="">
-                    <div>
-                        <h3>Pawel Sowa</h3>
-                        <p>Co-founder</p>
-                    </div>
-                </div>
-            </div>
+
             <div>
                 <img src="{{asset('image/logoText.png')}}" alt="">
                 <ul  class="social-icons">
@@ -218,7 +209,7 @@
          <form method="post" action="{{route('feedback')}}">
              @csrf
              <div>
-                 <input name="name" id="email" class="check-mail" type="text">
+                 <input name="name" id="email" class="check-name" type="text">
                  <label for="email">Ad-Soyad</label>
              </div>
              <div>
@@ -226,11 +217,11 @@
                  <label for="email">E-Posta</label>
              </div>
              <div>
-                 <input name="phoneNumber" id="email" class="check-mail" type="tel">
+                 <input name="phoneNumber" id="email" class="check-tel" type="tel">
                  <label for="email">Telefon Numarası</label>
              </div>
              <div>
-                 <input name="description" id="email" class="check-mail" type="text">
+                 <input name="description" id="email" class="check-message" type="text">
                  <label for="email">Mesaj</label>
              </div>
              <button type="submit" class="button"><span class="button__text">SEND MESSAGE</span></button>
@@ -678,6 +669,38 @@
             }
         }, 10);
 
+    });
+</script>
+<script>
+    $(window).keyup(function(e)
+    {
+        if($(".check-mail").val()){
+            $(".check-mail+label").addClass("inputhover")
+        }
+        else {
+            $(".check-mail+label").removeClass("inputhover")
+        }
+
+        if($(".check-name").val()){
+            $(".check-name+label").addClass("inputhover")
+        }
+        else {
+            $(".check-name+label").removeClass("inputhover")
+        }
+
+        if($(".check-tel").val()){
+            $(".check-tel+label").addClass("inputhover")
+        }
+        else {
+            $(".check-tel+label").removeClass("inputhover")
+        }
+
+        if($(".check-message").val()){
+            $(".check-message+label").addClass("inputhover")
+        }
+        else {
+            $(".check-message+label").removeClass("inputhover")
+        }
     });
 </script>
 <script>
