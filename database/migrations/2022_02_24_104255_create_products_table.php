@@ -17,7 +17,10 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id');
             $table->string('title');
-            $table->string('description');
+            $table->string('metre_kare');
+            $table->string('konum');
+            $table->string('phoneNumber');
+            $table->text('description');
             $table->string('slug');
             $table->boolean('status')->withComment('0 ise aktif 1 ise pasif');
             $table->timestamps();

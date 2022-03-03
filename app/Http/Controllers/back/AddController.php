@@ -40,6 +40,9 @@ class AddController extends Controller
             $products->category_id=$request->category_id;
             $products->title = $request->title;
             $products->description = $request->description;
+            $products->metre_kare = $request->metre_kare;
+            $products->konum=$request->konum;
+            $products->phoneNumber = $request->phoneNumber;
             $products->slug=$request->slug;
             $products->status=0;
             $products->created_at =now();

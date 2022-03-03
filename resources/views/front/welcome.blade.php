@@ -121,7 +121,7 @@
     </div>
     <div class="projects" id="projects">
         @foreach($categories as $category)
-        <a href="" data-aos="fade-up">
+        <a href="{{route('pages.projectPage',['category_id'=>$category->id])}}" data-aos="fade-up">
             <div class="project">
                 <img src="{{asset($category->mainpage_photo)}}" alt="">
                 <div class="project-text">
@@ -172,14 +172,14 @@
         <h2 class="sliderTwoPhotos__title">exterior</h2>
         <div id="two" class="bal-container">
             <div class="bal-after">
-                <img src="{{asset('front/img/count.jpg')}}">
+                <img src="{{asset($before_column->photo_1)}}">
                 <div class="bal-afterPosition bal-afterPosition-default afterLabel">
                     After
                 </div>
             </div>
             <div class="bal-before bal-before-default">
                 <div class="bal-before-inset bal-before-inset-default">
-                    <img src="{{asset('front/img/main.jpg')}}">
+                    <img src="{{asset($before_column->photo_2)}}">
                     <div class="bal-beforePosition bal-beforePosition-default beforeLabel">
                         Before
                     </div>

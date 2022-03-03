@@ -48,6 +48,7 @@
 <main>
     <div class="slider">
         <div class="slide-inner">
+            @foreach($projects as $project)
             <div class="slide projec close active slide1">
                 <img src="{{asset('front/img/main.jpg')}}" alt="">
                 <div class="slide-text animate__animated active">
@@ -56,67 +57,16 @@
                 </div>
                 <div class="hoverText">
                     <h3>to new challenges</h3>
-                    <p>We took part in a big and remarkable project. We were responsible for the interior design of all
-                        the public spaces in a brand new apartment complex by NOHO Investment. The place is truly
-                        revolutionary - it has everything from saunas and coworking spaces to gyms and yoga studios.
-                    </p>
-                    <p> While working on the design, we tried to continue the sophisticated modern architecture of the
-                        place and, at the same time, bring in the elements inspired by nature. As a result, we managed
-                        to turn a common stairwell into something sophisticated, modern and luxurious.</p>
+                   <p>{!!$project->description!!}</p>
                     <a class="back"><i class="fal fa-chevron-left"></i> </a>
                     <ul>
-                        <li><i class="fal fa-map-marker-alt"></i>İstanbul, Türkiye</li>
-                        <li><i class="fal fa-calendar-alt"></i> 06.01.2022</li>
-                        <li><i class="far fa-ruler-triangle"></i> 685 m2</li>
+                        <li><i class="fal fa-map-marker-alt"></i>{{$project->konum}}</li>
+                        <li><i class="fal fa-calendar-alt"></i> {{$project->phoneNumber}}</li>
+                        <li><i class="far fa-ruler-triangle"></i>{{$project->metre_kare}}</li>
                     </ul>
                 </div>
             </div>
-            <div class="slide projec close slide2">
-                <img src="{{asset('front/img/blog2.jpg')}}" alt="">
-                <div class="slide-text animate__animated active">
-                    <h2>We are always open </h2>
-                    <a type="submit" class="button discover" id="slide2"><span class="button__text">Discover More</span></a>
-                </div>
-                <div class="hoverText">
-                    <h3>to new challenges</h3>
-                    <p>We took part in a big and remarkable project. We were responsible for the interior design of all
-                        the public spaces in a brand new apartment complex by NOHO Investment. The place is truly
-                        revolutionary - it has everything from saunas and coworking spaces to gyms and yoga studios.
-                    </p>
-                    <p> While working on the design, we tried to continue the sophisticated modern architecture of the
-                        place and, at the same time, bring in the elements inspired by nature. As a result, we managed
-                        to turn a common stairwell into something sophisticated, modern and luxurious.</p>
-                    <a class="back"><i class="fal fa-chevron-left"></i> </a>
-                    <ul>
-                        <li><i class="fal fa-map-marker-alt"></i>İstanbul, Türkiye</li>
-                        <li><i class="fal fa-calendar-alt"></i> 06.01.2022</li>
-                        <li><i class="far fa-ruler-triangle"></i> 685 m2</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="slide projec close slide3">
-                <img src="{{asset('front/img/count.jpg')}}" alt="">
-                <div class="slide-text animate__animated active">
-                    <h2>We are challenges</h2>
-                    <a type="submit" class="button discover" id="slide3"><span class="button__text">Discover More</span></a>
-                </div>
-                <div class="hoverText">
-                    <h3>to new challenges</h3>
-                    <p>We took part in a big and remarkable project. We were responsible for the interior design of all
-                        the public spaces in a brand new apartment complex by NOHO Investment. The place is truly
-                        revolutionary - it has everything from saunas and coworking spaces to gyms and yoga studios.
-                    </p>
-                    <p> While working on the design, we tried to continue the sophisticated modern architecture of the
-                        place and, at the same time, bring in the elements inspired by nature. As a result, we managed
-                        to turn a common stairwell into something sophisticated, modern and luxurious.</p>
-                    <a class="back"><i class="fal fa-chevron-left"></i> </a>
-                    <ul>
-                        <li><i class="fal fa-map-marker-alt"></i>İstanbul, Türkiye</li>
-                        <li><i class="fal fa-calendar-alt"></i> 06.01.2022</li>
-                        <li><i class="far fa-ruler-triangle"></i> 685 m2</li>
-                    </ul>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="slider-foot projects">
             <ul class="social-icons">

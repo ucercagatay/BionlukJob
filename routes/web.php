@@ -20,15 +20,11 @@ use App\Http\Controllers\back\UserController;
 */
 
 Route::get('/', [PageController::class,'mainpage'])->name('mainpage');
-Route::get('/project',
-    function (){
-    return view("front.project");
-    }
-);
+
 //Front Routes
 Route::controller(PageController::class)->group(function () {
-    Route::prefix('/page')->group(function () {
-
+    Route::prefix('/page')->name('pages.')->group(function () {
+        Route::get('/projects/{category_id}','projectPage')->name('projectPage');
     });
 });
 Route::controller(UserController::class)->group(function () {
