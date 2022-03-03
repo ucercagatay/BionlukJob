@@ -51,6 +51,7 @@ Route::prefix('/admin')->name('admin.')->middleware(['isLogin'])->group(function
     Route::controller(DeleteController::class)->name('switch.')->group(function () {
         Route::prefix('/delete')->group(function () {
         Route::get('/category/{id}','switchCategory')->name('category');
+        Route::get('/product/{id}','switchProject')->name('product');
         });
     });
 //Upgrade Routes
@@ -78,6 +79,7 @@ Route::prefix('/admin')->name('admin.')->middleware(['isLogin'])->group(function
         Route::get('/products','showProducts')->name('product');
         Route::get('/pasifCategories','pasifCategories')->name('pasifCategories');
         Route::get('/messages','showMessages')->name('messages');
+        Route::get('/pasifProjeler','pasifProjects')->name('pasifProjects');
 
 
         });

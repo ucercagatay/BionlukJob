@@ -4,6 +4,7 @@ namespace App\Http\Controllers\back;
 
 use App\Http\Controllers\Controller;
 use App\Models\Categorie;
+use App\Models\Products;
 use Illuminate\Http\Request;
 
 class DeleteController extends Controller
@@ -17,5 +18,16 @@ class DeleteController extends Controller
         }
         $category->save();
         return to_route('admin.show.categories');
+    }
+    public function switchProject(Request $request,$id){
+        $product=Products::find($request->id);
+        if ($product->status==0){
+            $product->status = 1;
+        }
+        else{
+            $product->status = 0;
+        }
+        $product->save();
+        return to_route('admin.show.product');
     }
 }

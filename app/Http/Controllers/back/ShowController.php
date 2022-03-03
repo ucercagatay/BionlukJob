@@ -20,7 +20,7 @@ class ShowController extends Controller
         return view('panel/show/categories',compact('categories'));
     }
         public function showProducts(){
-        $products=Products::all();
+        $products=Products::where('status',0)->get();
         return view('panel/show/showProducts',compact('products'));
         }
         public function pasifCategories(){
@@ -30,5 +30,9 @@ class ShowController extends Controller
         public function showMessages(){
         $messages=Feedback::all();
         return view('panel/show/messages',compact('messages'));
+        }
+        public function pasifProjects(){
+        $products=Products::where('status',1)->get();
+        return view('panel/show/pasifProjeler',compact('products'));
         }
 }

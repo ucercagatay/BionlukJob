@@ -25,7 +25,6 @@
                             <th>Açıklama</th>
                             <th>Oluşturulma Tarihi</th>
                             <th>Düzenlenme Tarihi</th>
-                            <th>Güncelle</th>
                             <th>Pasif Et</th>
                         </tr>
                         </thead>
@@ -39,8 +38,7 @@
                                 <td><p>{{$product->description}}</p></td>
                                 <td><p>{{$product->created_at}}</p></td>
                                 <td>@if($product->updated_at!=Null)<p>{{$product->updated_at}}</p>@else<p>Henüz Düzenlenmedi</p>@endif</td>
-                                <td><a href="{{route('admin.update.product',$product->id)}}" class="btn btn-info">Güncelle</a></td>
-                                <td><a href="{{route('admin.switch.product',$product->id)}}" class="btn btn-danger">Pasif Et</a></td>
+                                <td><a href="{{route('admin.switch.product',$product->id)}}" class="btn btn-danger">Aktif Et</a></td>
                             </tr>
                         @endforeach
                         </tbody>
