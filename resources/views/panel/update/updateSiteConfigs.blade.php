@@ -47,6 +47,11 @@
                                 <label for="">Adress</label>
                                 <input type="text" name="adress" value="{{$site_configs->adress}}" required>
                             </div>
+                            <div>
+                                <label for="">HAKKIMIZDA</label>
+                                <textarea id="summary-ckeditor"  cols="100" rows="100" name="about_us" required>{{$site_configs->about_us}}</textarea>
+
+                            </div>
                             <button type="submit" class="btn btn-success float-left">Ekle</button>
                         </form>
                     </div>
@@ -61,5 +66,9 @@
         setTimeout(()=>{
             $("#form-elements").addClass("show")
         },1000)
+    </script>
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <script>
+        CKEDITOR.replace('summary-ckeditor');
     </script>
 @endsection

@@ -54,6 +54,7 @@ class UpgradeController extends Controller
     public function postSiteConfigs(Request $request){
         $site_config=SiteConfig::where('id',1)->first();
         $site_config->phoneNumber=$request->phoneNumber;
+        $site_config->about_us=$request->about_us;
         $site_config->email=$request->email;
         $site_config->adress=$request->adress;
         $site_config->behance_url=$request->behance_url;

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('twitter_url');
             $table->string('behance_url');
             $table->string('phoneNumber');
+            $table->text('about_us');
             $table->timestamps();
         });
     }
