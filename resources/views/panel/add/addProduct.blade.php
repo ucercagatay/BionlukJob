@@ -38,11 +38,11 @@
                                         @endforeach
                                 </select>
                             </div>
-
                             <div>
-                                <label for="">Proje Açıklaması</label>
-                                <textarea id="summary-ckeditor" cols="100" rows="100" name="description" required></textarea>
+                                <label for="">Proje Telefon Numarası</label>
+                                <input type="text" class="form-control" name="phoneNumber" required>
                             </div>
+
                             <div>
                                 <label for="">Proje MetreKare</label>
                                 <input type="text" class="form-control" name="metre_kare" required>
@@ -52,8 +52,8 @@
                                 <input type="text" class="form-control" name="konum" required>
                             </div>
                             <div>
-                                <label for="">Proje Telefon Numarası</label>
-                                <input type="text" class="form-control" name="phoneNumber" required>
+                                <label for="">Proje Açıklaması</label>
+                                <textarea id="summary-ckeditor" cols="100" rows="100" name="description" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-success float-left">Ekle</button>
                         </form>

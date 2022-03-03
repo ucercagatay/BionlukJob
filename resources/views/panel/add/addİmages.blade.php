@@ -43,20 +43,20 @@
                                 <div class="input-group hdtuto control-group lst increment" >
                                     <input type="file" name="image[]" class="myfrm form-control">
                                     <div class="input-group-btn">
-                                        <button class="btn btn-success" type="button"><i class="fldemo glyphicon glyphicon-plus"></i>Add</button>
+                                        <button class="btn btn-success" type="button"><i class="fldemo glyphicon glyphicon-plus"></i>Yeni Alan Ekle</button>
                                     </div>
                                 </div>
                                 <div class="clone hide">
                                     <div class="hdtuto control-group lst input-group" style="margin-top:10px">
                                         <input type="file" name="image[]" class="myfrm form-control">
                                         <div class="input-group-btn">
-                                            <button class="btn btn-danger" type="button"><i class="fldemo glyphicon glyphicon-remove"></i> Remove</button>
+                                            <button class="btn btn-danger" type="button"><i class="fldemo glyphicon glyphicon-remove"></i>Alanı Sil</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div></div>
                                 <div>
-                                    <button type="submit" class="btn btn-success" style="margin-top:10px">Submit</button>
+                                    <button type="submit" class="btn btn-success" style="margin-top:10px">Fotoğrafları Kaydet</button>
                                 </div>
 
                             </form>
