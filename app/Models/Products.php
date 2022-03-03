@@ -14,4 +14,7 @@ class Products extends Model
     public function getImages(){
         return $this->hasMany('App\Models\ProductsImage','product_id','id');
     }
+    public function getFirstİmage(){
+        return $this->hasOne('App\Models\ProductsImage','product_id','id');
+    }
 }

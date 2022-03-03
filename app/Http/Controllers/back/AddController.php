@@ -63,7 +63,7 @@ class AddController extends Controller
                 $files=$name;
                 $file=new ProductsImage();
                 $file->product_id=$request->product_id;
-                $file->image=$files;
+                $file->image='uploads/'.$files;
                 $file->created_at=now();
                 $file->save();
             }

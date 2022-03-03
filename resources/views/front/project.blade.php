@@ -49,11 +49,11 @@
     <div class="slider">
         <div class="slide-inner">
             @foreach($projects as $project)
-            <div class="slide projec close active slide1">
-                <img src="{{asset('front/img/main.jpg')}}" alt="">
+            <div class="slide projec close active slide{{$project->id}}">
+                <img src="{{asset($project->getFirstİmage->image)}}" alt="">
                 <div class="slide-text animate__animated active">
                     <h2> to new challenges</h2>
-                    <a type="submit" class="button discover" id="slide1"><span class="button__text">Discover More</span></a>
+                    <a type="submit" class="button discover" id="slide{{$project->id}}"><span class="button__text">Discover More</span></a>
                 </div>
                 <div class="hoverText">
                     <h3>to new challenges</h3>
@@ -95,30 +95,15 @@
         </div>
         <a class="bulb active"><i class="fas fa-lightbulb-slash"></i></a>
     </div>
-    <div class="gallery">
+        @foreach($projects as $project)
+        <div class="gallery slide{{$project->id}}">
+            @foreach($project->getImages as $images)
         <div data-aos="fade-up">
-            <img src="{{asset('front/img/count.jpg')}}" alt="">
+            <img src="{{asset($images->image)}}" alt="">
         </div>
-        <div data-aos="fade-up">
-            <img src="{{asset('front/img/count.jpg')}}" alt="">
+            @endforeach
         </div>
-        <div data-aos="fade-up">
-            <img src="{{asset('front/img/count.jpg')}}" alt="">
-        </div>
-        <div data-aos="fade-up">
-            <img src="{{asset('front/img/count.jpg')}}" alt="">
-        </div>
-        <div data-aos="fade-up">
-            <img src="{{asset('front/img/count.jpg')}}" alt="">
-        </div>
-        <div data-aos="fade-up">
-            <img src="{{asset('front/img/count.jpg')}}" alt="">
-        </div>
-        <div data-aos="fade-up">
-            <img src="{{asset('front/img/count.jpg')}}" alt="">
-        </div>
-
-    </div>
+        @endforeach
     <div class="footer__wrapper">
         <div class="footer__content container">
             <div class="footer__top">
@@ -272,15 +257,22 @@
 
     const intervalTime = 5000;
     let slideInterval;
-    $('.discover').click(function () {
+    function clearGalery() {
+        $('.gallery').css('display', 'none');
+    }
+    $('.discover').click(function (event) {
+        clearGalery()
+        id='.gallery.'+event.currentTarget.id;
         $('.slide.active .slide-text').removeClass('active')
         $('.slide.active .hoverText').addClass('active')
+        $(id).css('display','block');
         $('.slider-buttons').addClass('hide');
         $('body').removeClass('sticky');
         auto = false;
         clearInterval(slideInterval)
     })
     $('.back').click(function () {
+        clearGalery()
         $('.slide.active .slide-text').addClass('active')
         $('.slide.active .hoverText').removeClass('active')
         $('.slider-buttons').removeClass('hide');
